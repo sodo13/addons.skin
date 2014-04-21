@@ -1,0 +1,106 @@
+<window>
+	<defaultcontrol>10</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<include>CommonStbBackground</include>
+		<control type="grouplist" id="1">
+			<posx>75</posx>
+			<posy>80</posy>
+			<height>515</height>
+			<width>775</width>
+			<align>left</align>
+			<aligny>center</aligny>
+			<itemgap>5</itemgap>
+			<orientation>vertical</orientation>
+			<control type="button" id="10">
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Tuner A)</label>
+			</control>
+			<control type="button" id="11">
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Tuner B)</label>
+				<visible>!IsEmpty(Window.Property(tuner_b))</visible>
+			</control>
+		</control>
+		<control type="grouplist" id="1">
+			<posx>840</posx>
+			<posy>570</posy>
+			<height>85</height>
+			<width>370</width>
+			<align>left</align>
+			<aligny>center</aligny>
+			<itemgap>5</itemgap>
+			<orientation>Horizontal</orientation>
+			<control type="image">
+				<width>35</width>
+				<height>35</height>
+				<texture>DefaultIconInfo.png</texture> 
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(10)</visible>
+				<label>_(Select the tuner which needs to been configured.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(11)</visible>
+				<label>_(Select the tuner which needs to been configured.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+		</control>
+		<control type="image">
+			<description>Section header image</description>
+			<posx>20</posx>
+			<posy>3</posy>
+			<width>35</width>
+			<height>35</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icon_system.png</texture>
+		</control>
+		<control type="grouplist">
+			<posx>65</posx>
+			<posy>5</posy>
+			<width>1000</width>
+			<height>30</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>5</itemgap>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<label>[COLOR=blue] - [/COLOR]$INFO[Container.FolderName]</label>
+				<visible>!IsEmpty(Container.FolderName)</visible>
+			</control>
+		</control>
+		<include>Clock</include>
+	</controls>
+</window>

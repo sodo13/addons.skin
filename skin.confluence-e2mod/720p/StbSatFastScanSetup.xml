@@ -1,0 +1,199 @@
+<window>
+	<defaultcontrol>10</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<include>CommonStbBackground</include>
+		<control type="grouplist" id="1">
+			<posx>75</posx>
+			<posy>80</posy>
+			<height>515</height>
+			<width>775</width>
+			<align>left</align>
+			<aligny>center</aligny>
+			<itemgap>5</itemgap>
+			<orientation>vertical</orientation>
+			<ondown>100</ondown>
+			<onup>100</onup>
+			<control type="spincontrolex" id="10">
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<disabledcolor>grey3</disabledcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Tuner)</label>
+			</control>
+			<control type="button" id="11">
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<disabledcolor>grey3</disabledcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<font>font132</font>
+				<label>_(Provider)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="radiobutton" id="12">
+				<height>30</height>
+				<width>735</width>
+				<font>font132</font>
+				<label>_(HD list)</label>
+				<textcolor>white</textcolor>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+			</control>
+			<control type="radiobutton" id="13">
+				<height>30</height>
+				<width>735</width>
+				<font>font132</font>
+				<label>_(Use fastscan channel numbering)</label>
+				<textcolor>white</textcolor>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+			</control>
+			<control type="radiobutton" id="14">
+				<height>30</height>
+				<width>735</width>
+				<font>font132</font>
+				<label>_(Use fastscan channel names)</label>
+				<textcolor>white</textcolor>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+			</control>
+		</control>
+		<control type="grouplist" id="1">
+			<posx>840</posx>
+			<posy>570</posy>
+			<height>85</height>
+			<width>370</width>
+			<align>left</align>
+			<aligny>center</aligny>
+			<itemgap>5</itemgap>
+			<orientation>Horizontal</orientation>
+			<control type="image">
+				<width>35</width>
+				<height>35</height>
+				<texture>DefaultIconInfo.png</texture> 
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(10)</visible>
+				<label>_(Select the tuner which needs to preform the scan.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(11)</visible>
+				<label>_(Select the desired satellite provider.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(12)</visible>
+				<label>_(Select HD or SD channellist)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(13)</visible>
+				<label>_(Use the fastscan channel numbering or number from 1 to ~.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(14)</visible>
+				<label>_(Use the names from the fastscan list or the original names.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>100</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(100)</visible>
+				<label>_(Start scan, this may take a while.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+		</control>	
+		<control type="image">
+			<posx>300</posx>
+			<posy>610</posy>
+			<width>30</width>
+			<height>30</height>
+			<texture border="1">key_green.png</texture>
+		</control>
+		<control type="button" id="100">
+			<posx>295</posx>
+			<posy>610</posy>
+			<width>280</width>
+			<height>30</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font12_title</font>
+			<label>_(Start scan)</label>
+			<onup>1</onup>
+			<ondown>10</ondown>
+		</control>
+		<control type="image">
+			<description>Section header image</description>
+			<posx>20</posx>
+			<posy>3</posy>
+			<width>35</width>
+			<height>35</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icon_system.png</texture>
+		</control>
+		<control type="grouplist">
+			<posx>65</posx>
+			<posy>5</posy>
+			<width>1000</width>
+			<height>30</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>5</itemgap>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<label>_(Fast scan setup)</label>
+			</control>
+		</control>
+		<include>Clock</include>
+	</controls>
+</window>

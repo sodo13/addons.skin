@@ -1,0 +1,208 @@
+<window>
+	<defaultcontrol>10</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>210</posx>
+		<posy>100</posy>
+	</coordinates>
+	<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+	<animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+	<controls>
+		<control type="group">
+			<control type="image">
+				<description>background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>860</width>
+				<height>550</height>
+				<texture border="40">DialogBack2.png</texture>
+			</control>
+			<control type="image">
+				<description>Dialog Header image</description>
+				<posx>40</posx>
+				<posy>16</posy>
+				<width>800</width>
+				<height>40</height>
+				<texture>dialogheader.png</texture>
+			</control>
+			<control type="label">
+				<description>header label</description>
+				<posx>40</posx>
+				<posy>20</posy>
+				<width>800</width>
+				<height>30</height>
+				<font>font13_title</font>
+				<label>_(Wireless networks)</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>selected</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+
+			<control type="list" id="10">
+				<posx>20</posx>
+				<posy>80</posy>
+				<width>840</width>
+				<height>430</height>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="110" width="740">
+					<control type="label">
+						<posx>20</posx>
+						<posy>0</posy>
+						<width>600</width>
+						<height>25</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>grey</selectedcolor>
+						<info>ListItem.StbList_WlanNetworkName</info>
+					</control>
+					<control type="label">
+						<posx>20</posx>
+						<posy>26</posy>
+						<width>400</width>
+						<height>25</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>grey</selectedcolor>
+						<label>_(Address) $INFO[ListItem.StbList_WlanNetworkAddress]</label>
+					</control>
+					<control type="label">
+						<posx>20</posx>
+						<posy>53</posy>
+						<width>160</width>
+						<height>25</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>grey</selectedcolor>
+						<label>_(Channel) $INFO[ListItem.StbList_WlanNetworkChannel]</label>
+					</control>
+					<control type="label">
+						<posx>220</posx>
+						<posy>53</posy>
+						<width>160</width>
+						<height>25</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>grey</selectedcolor>
+						<label>_(Encryption) $INFO[ListItem.StbList_WlanNetworkEncryption]</label>
+					</control>
+					<control type="label">
+						<posx>20</posx>
+						<posy>79</posy>
+						<width>600</width>
+						<height>25</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>grey</selectedcolor>
+						<label>_(Bitrates) $INFO[ListItem.StbList_WlanNetworkBitRates]</label>
+					</control>
+
+				</itemlayout>
+				<focusedlayout height="110" width="760">
+					<control type="image">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>800</width>
+						<height>110</height>
+						<texture border="1">button-nofocus.png</texture>
+						<include>VisibleFadeEffect</include>
+					</control>
+					<control type="image">
+						<posx>12</posx>
+						<posy>0</posy>
+						<width>800</width>
+						<height>110</height>
+						<texture border="1">button-focus2.png</texture>
+						<include>VisibleFadeEffect</include>
+					</control>
+					<control type="label">
+						<posx>20</posx>
+						<posy>0</posy>
+						<width>600</width>
+						<height>25</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>grey</selectedcolor>
+						<info>ListItem.StbList_WlanNetworkName</info>
+					</control>
+					<control type="label">
+						<posx>20</posx>
+						<posy>26</posy>
+						<width>400</width>
+						<height>25</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>grey</selectedcolor>
+						<label>_(Address) $INFO[ListItem.StbList_WlanNetworkAddress]</label>
+					</control>
+					<control type="label">
+						<posx>20</posx>
+						<posy>53</posy>
+						<width>160</width>
+						<height>25</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>grey</selectedcolor>
+						<label>_(Channel) $INFO[ListItem.StbList_WlanNetworkChannel]</label>
+					</control>
+					<control type="label">
+						<posx>220</posx>
+						<posy>53</posy>
+						<width>160</width>
+						<height>25</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>grey</selectedcolor>
+						<label>_(Encryption) $INFO[ListItem.StbList_WlanNetworkEncryption]</label>
+					</control>
+					<control type="label">
+						<posx>20</posx>
+						<posy>79</posy>
+						<width>600</width>
+						<height>25</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>grey</selectedcolor>
+						<label>_(Bitrates) $INFO[ListItem.StbList_WlanNetworkBitRates]</label>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="60">
+				<posx>834</posx>
+				<posy>64</posy>
+				<width>20</width>
+				<height>480</height>
+				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+
+		</control>
+	</controls>
+</window>

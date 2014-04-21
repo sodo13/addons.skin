@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog">
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<description>workaround for texture not being loaded</description>
+			<posx>-10000</posx>
+			<texture>tvguide-program-red.png</texture>
+		</control>
+		<control type="image">
+			<description>workaround for texture not being loaded</description>
+			<posx>-10000</posx>
+			<texture>tvguide-program-red-focus.png</texture>
+		</control>
+
+		<!-- Background -->
+		<control type="image" id="4600">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>special://skin/backgrounds/SKINDEFAULT.jpg</texture>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>black-back.png</texture>
+		</control>
+		<!-- left top frame -->
+		<control type="group">
+			<control type="image">
+				<description>background image</description>
+				<posx>20</posx>
+				<posy>20</posy>
+				<width>400</width>
+				<height>50</height>
+				<texture border="10">ContentPanel.png</texture>
+			</control>
+			<control type="label">
+				<posx>395</posx>
+				<posy>25</posy>
+				<width>400</width>
+				<height>25</height>
+				<font>font28_title</font>
+				<textcolor>white</textcolor>
+				<align>right</align>
+				<aligny>right</aligny>
+				<label>$INFO[System.Time]</label>
+			</control>
+			<control type="label">
+				<posx>35</posx>
+				<posy>35</posy>
+				<width>400</width>
+				<height>25</height>
+				<font>font12</font>
+				<textcolor>white</textcolor>
+				<align>left</align>
+				<aligny>left</aligny>
+				<label>$INFO[System.Date]</label>
+			</control>
+		</control>
+		<!-- left videowindow -->
+		<control type="group">
+			<control type="image">
+				<description>background image</description>
+				<posx>20</posx>
+				<posy>75</posy>
+				<width>400</width>
+				<height>230</height>
+				<texture border="10">DialogBack2.png</texture>
+			</control>
+			<control type="videowindow">
+				<posx>40</posx>
+				<posy>90</posy>
+				<width>365</width>
+				<height>205</height>
+			</control>
+			<control type="label" id="5000">
+				<description>visibility marker for TV Guide group</description>
+			</control>
+		</control>
+
+		<control type="group">
+			<description>TV Guide group</description>
+			<posx>0</posx>
+			<posy>300</posy>
+			<width>1280</width>
+			<height>720</height>
+			<control type="button" id="5001">
+				<description>marker for EPG data view - should be hidden!</description>
+				<posx>220</posx>
+				<posy>330</posy>
+				<width>1040</width>
+				<!-- 9 place x35 -->
+				<height>315</height>
+				<visible>false</visible>
+			</control>
+
+			<!-- Date and time row -->
+			<control type="group">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>30</height>
+				<visible>true</visible>
+				<control type="label" id="4001">
+					<description>1st half hour column</description>
+					<posx>220</posx>
+					<posy>0</posy>
+					<width>260</width>
+					<height>30</height>
+					<textcolor>ffffffff</textcolor>
+					<font>font13</font>
+					<aligny>center</aligny>
+				</control>
+				<control type="image">
+					<posx>220</posx>
+					<posy>0</posy>
+					<width>259</width>
+					<height>32</height>
+					<texture>button-nofocus.png</texture>
+				</control>
+				<control type="label" id="4002">
+					<description>2nd half hour column</description>
+					<posx>480</posx>
+					<posy>0</posy>
+					<width>260</width>
+					<height>30</height>
+					<textcolor>ffffffff</textcolor>
+					<font>font13</font>
+					<aligny>center</aligny>
+				</control>
+				<control type="image">
+					<posx>480</posx>
+					<posy>0</posy>
+					<width>259</width>
+					<height>32</height>
+					<texture>button-nofocus.png</texture>
+				</control>
+				<control type="label" id="4003">
+					<description>3rd half hour column</description>
+					<posx>740</posx>
+					<posy>0</posy>
+					<width>260</width>
+					<height>30</height>
+					<textcolor>ffffffff</textcolor>
+					<font>font13</font>
+					<aligny>center</aligny>
+				</control>
+				<control type="image">
+					<posx>740</posx>
+					<posy>0</posy>
+					<width>259</width>
+					<height>32</height>
+					<texture>button-nofocus.png</texture>
+				</control>
+				<control type="label" id="4004">
+					<description>4th half hour column</description>
+					<posx>1000</posx>
+					<posy>0</posy>
+					<width>260</width>
+					<height>30</height>
+					<textcolor>ffffffff</textcolor>
+					<font>font13</font>
+					<aligny>center</aligny>
+				</control>
+				<control type="image">
+					<posx>1000</posx>
+					<posy>0</posy>
+					<width>259</width>
+					<height>32</height>
+					<texture>button-nofocus.png</texture>
+				</control>
+			</control>
+
+			<!-- Channels column -->
+			<control type="group">
+				<posx>15</posx>
+				<posy>30</posy>
+				<width>165</width>
+				<height>400</height>
+				<visible>true</visible>
+
+				<!-- text labels -->
+				<control type="label" id="4010">
+					<description>1st channel</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>35</height>
+					<textcolor>ffffffff</textcolor>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="label" id="4011">
+					<description>2nd channel</description>
+					<posx>0</posx>
+					<posy>35</posy>
+					<width>200</width>
+					<height>35</height>
+					<textcolor>ffffffff</textcolor>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="label" id="4012">
+					<description>3rd channel</description>
+					<posx>0</posx>
+					<posy>70</posy>
+					<width>200</width>
+					<height>35</height>
+					<textcolor>ffffffff</textcolor>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="label" id="4013">
+					<description>4th channel</description>
+					<posx>0</posx>
+					<posy>105</posy>
+					<width>200</width>
+					<height>35</height>
+					<textcolor>ffffffff</textcolor>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="label" id="4014">
+					<description>5th channel</description>
+					<posx>0</posx>
+					<posy>140</posy>
+					<width>200</width>
+					<height>35</height>
+					<textcolor>ffffffff</textcolor>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="label" id="4015">
+					<description>6th channel</description>
+					<posx>0</posx>
+					<posy>175</posy>
+					<width>200</width>
+					<height>35</height>
+					<textcolor>ffffffff</textcolor>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="label" id="4016">
+					<description>7th channel</description>
+					<posx>0</posx>
+					<posy>210</posy>
+					<width>200</width>
+					<height>35</height>
+					<textcolor>ffffffff</textcolor>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="label" id="4017">
+					<description>8th channel</description>
+					<posx>0</posx>
+					<posy>245</posy>
+					<width>200</width>
+					<height>35</height>
+					<textcolor>ffffffff</textcolor>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="label" id="4018">
+					<description>9th channel</description>
+					<posx>0</posx>
+					<posy>280</posy>
+					<width>200</width>
+					<height>35</height>
+					<textcolor>ffffffff</textcolor>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="label" id="4019">
+					<description>10th channel</description>
+					<posx>0</posx>
+					<posy>305</posy>
+					<width>200</width>
+					<height>35</height>
+					<textcolor>ffffffff</textcolor>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+				</control>
+				<!-- logo images -->
+				<control type="image" id="4110">
+					<description>1st channel</description>
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>30</height>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image" id="4111">
+					<description>2nd channel</description>
+					<posx>10</posx>
+					<posy>35</posy>
+					<width>200</width>
+					<height>30</height>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image" id="4112">
+					<description>3rd channel</description>
+					<posx>10</posx>
+					<posy>70</posy>
+					<width>200</width>
+					<height>30</height>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image" id="4113">
+					<description>4th channel</description>
+					<posx>10</posx>
+					<posy>105</posy>
+					<width>200</width>
+					<height>30</height>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image" id="4114">
+					<description>5th channel</description>
+					<posx>10</posx>
+					<posy>140</posy>
+					<width>200</width>
+					<height>30</height>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image" id="4115">
+					<description>6th channel</description>
+					<posx>10</posx>
+					<posy>175</posy>
+					<width>200</width>
+					<height>30</height>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image" id="4116">
+					<description>7th channel</description>
+					<posx>10</posx>
+					<posy>210</posy>
+					<width>200</width>
+					<height>30</height>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image" id="4117">
+					<description>8th channel</description>
+					<posx>10</posx>
+					<posy>245</posy>
+					<width>200</width>
+					<height>30</height>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image" id="4118">
+					<description>9th channel</description>
+					<posx>10</posx>
+					<posy>280</posy>
+					<width>200</width>
+					<height>30</height>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image" id="4119">
+					<description>10th channel</description>
+					<posx>10</posx>
+					<posy>305</posy>
+					<width>200</width>
+					<height>30</height>
+					<aspectratio>keep</aspectratio>
+				</control>
+			</control>
+
+			<control type="label" id="4020">
+				<description>Program title</description>
+				<posx>30</posx>
+				<posy>510</posy>
+				<width>630</width>
+				<height>50</height>
+				<textcolor>ffffffff</textcolor>
+				<font>font13</font>
+				<aligny>center</aligny>
+			</control>
+			<control type="image" id="4024">
+				<description>Channel logo</description>
+				<posx>540</posx>
+				<posy>518</posy>
+				<width>80</width>
+				<height>40</height>
+				<aspectratio>keep</aspectratio>
+				<fadetime>500</fadetime>
+				<visible>false</visible><!-- unused in default skin -->
+			</control>
+			<control type="label" id="4021">
+				<description>Program time</description>
+				<posx>900</posx>
+				<posy>510</posy>
+				<width>340</width>
+				<height>50</height>
+				<textcolor>ffffffff</textcolor>
+				<font>font13</font>
+				<align>right</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="textbox" id="4022">
+				<description>Program description</description>
+				<posx>30</posx>
+				<posy>550</posy>
+				<width>850</width>
+				<height>149</height>
+				<textcolor>ffffffff</textcolor>
+				<font>font13</font>
+				<wrapmultiline>true</wrapmultiline>
+				<autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
+			</control>
+
+			<control type="image" id="4100">
+				<posx>180</posx>
+				<posy>30</posy>
+				<width>2</width>
+				<height>368</height>
+				<texture>tvguide-timebar.png</texture>
+			</control>
+
+			<control type="label" id="4200">
+				<description>visibility marker for loading group</description>
+			</control>
+
+			<control type="label" id="4300">
+				<description>visibility marker for mouse control group</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>50</width>
+				<height>50</height>
+			</control>
+			<control type="group">
+				<posx>0</posx>
+				<posy>720</posy>
+				<width>1280</width>
+				<height>70</height>
+
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>70</height>
+					<texture>tvguide-timebar.png</texture>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>70</height>
+					<texture>tvguide-glasspane.png</texture>
+				</control>
+				<control type="label">
+					<posx>20</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>50</height>
+					<label>$ADDON[script.tvguide 30005]</label>
+					<textcolor>ffffffff</textcolor>
+					<font>font13</font>
+					<aligny>center</aligny>
+				</control>
+				<control type="label">
+					<posx>800</posx>
+					<posy>10</posy>
+					<width>400</width>
+					<height>50</height>
+					<label>$ADDON[script.tvguide 30007]</label>
+					<textcolor>ffffffff</textcolor>
+					<font>font13</font>
+					<aligny>center</aligny>
+				</control>
+
+				<control type="button" id="4301">
+					<description>navigate to now</description>
+					<posx>200</posx>
+					<posy>10</posy>
+					<width>100</width>
+					<height>50</height>
+					<label>$ADDON[script.tvguide 30006]</label>
+					<textcolor>ffffffff</textcolor>
+					<font>font13</font>
+					<aligny>center</aligny>
+					<align>center</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+					<texturenofocus>tvguide-program-grey.png</texturenofocus>
+				</control>
+
+				<control type="button" id="4302">
+					<description>navigate left</description>
+					<posx>340</posx>
+					<posy>10</posy>
+					<width>100</width>
+					<height>50</height>
+					<textcolor>ffffffff</textcolor>
+					<font>font13</font>
+					<label>&lt;</label>
+					<aligny>center</aligny>
+					<align>center</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+					<texturenofocus>tvguide-program-grey.png</texturenofocus>
+				</control>
+				<control type="button" id="4303">
+					<description>navigate up</description>
+					<posx>450</posx>
+					<posy>10</posy>
+					<width>100</width>
+					<height>50</height>
+					<textcolor>ffffffff</textcolor>
+					<font>font13</font>
+					<label>^</label>
+					<aligny>center</aligny>
+					<align>center</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+					<texturenofocus>tvguide-program-grey.png</texturenofocus>
+				</control>
+				<control type="button" id="4304">
+					<description>navigate down</description>
+					<posx>560</posx>
+					<posy>10</posy>
+					<width>100</width>
+					<height>50</height>
+					<textcolor>ffffffff</textcolor>
+					<font>font13</font>
+					<label>v</label>
+					<aligny>center</aligny>
+					<align>center</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+					<texturenofocus>tvguide-program-grey.png</texturenofocus>
+				</control>
+				<control type="button" id="4305">
+					<description>navigate right</description>
+					<posx>670</posx>
+					<posy>10</posy>
+					<width>100</width>
+					<height>50</height>
+					<textcolor>ffffffff</textcolor>
+					<font>font13</font>
+					<label>&gt;</label>
+					<aligny>center</aligny>
+					<align>center</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+					<texturenofocus>tvguide-program-grey.png</texturenofocus>
+				</control>
+
+				<control type="button" id="4306">
+					<description>exit</description>
+					<posx>1220</posx>
+					<posy>10</posy>
+					<width>50</width>
+					<height>50</height>
+					<textcolor>ffffffff</textcolor>
+					<font>font13</font>
+					<label>X</label>
+					<aligny>center</aligny>
+					<align>center</align>
+					<texturefocus>tvguide-program-grey-focus.png</texturefocus>
+					<texturenofocus>tvguide-program-grey.png</texturenofocus>
+				</control>
+
+			</control>
+
+		</control><!-- id="5000" -->
+
+		<control type="label" id="6000">
+			<description>visibility marker for OSD Info bar</description>
+		</control>
+		<control type="group">
+			<description>OSD Info bar</description>
+			<posx>0</posx>
+			<posy>10</posy>
+			<width>1280</width>
+			<height>250</height>
+
+			<!-- Program description -->
+			<control type="label" id="6001">
+				<description>Program title</description>
+				<posx>430</posx>
+				<posy>10</posy>
+				<width>780</width>
+				<height>50</height>
+				<label>[B]Title[/B]</label>
+				<textcolor>ffffffff</textcolor>
+				<font>font13</font>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="6002">
+				<description>Program time</description>
+				<posx>1230</posx>
+				<posy>5</posy>
+				<width>240</width>
+				<height>50</height>
+				<label>[B]18:00 - 20:00[/B]</label>
+				<textcolor>ffffffff</textcolor>
+				<font>font13</font>
+				<align>right</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="textbox" id="6003">
+				<description>Program description</description>
+				<posx>430</posx>
+				<posy>50</posy>
+				<width>830</width>
+				<height>285</height>
+				<label>Description</label>
+				<textcolor>ffffffff</textcolor>
+				<font>font13</font>
+				<wrapmultiline>true</wrapmultiline>
+				<autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
+			</control>
+			<control type="label" id="6005">
+				<description>Program channel text</description>
+				<posx>490</posx>
+				<posy>155</posy>
+				<width>160</width>
+				<height>45</height>
+				<textcolor>ffffffff</textcolor>
+				<font>font13</font>
+				<align>center</align>
+			</control>
+
+		</control>
+		<!-- bottom color frame -->
+		<control type="group">
+			<control type="image">
+				<posx>100</posx>
+				<posy>684</posy>
+				<width>25</width>
+				<height>25</height>
+				<texture border="1">key_red.png</texture>
+			</control>
+			<control type="image">
+				<posx>405</posx>
+				<posy>684</posy>
+				<width>25</width>
+				<height>25</height>
+				<texture border="1">key_green.png</texture>
+			</control>
+			<control type="image">
+				<posx>715</posx>
+				<posy>684</posy>
+				<width>25</width>
+				<height>25</height>
+				<texture border="1">key_yellow.png</texture>
+			</control>
+			<control type="image">
+				<posx>1015</posx>
+				<posy>684</posy>
+				<width>25</width>
+				<height>25</height>
+				<texture border="1">key_blue.png</texture>
+			</control>
+		</control>
+
+		<control type="group">
+			<control type="label">
+				<posx>130</posx>
+				<posy>682</posy>
+				<width>160</width>
+				<height>25</height>
+				<font>font14</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<label></label>
+			</control>
+			<control type="label">
+				<posx>435</posx>
+				<posy>682</posy>
+				<width>160</width>
+				<height>25</height>
+				<font>font14</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<label>_(Timer)</label>
+			</control>
+			<control type="label">
+				<posx>745</posx>
+				<posy>682</posy>
+				<width>160</width>
+				<height>25</height>
+				<font>font14</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<label></label>
+			</control>
+			<control type="label">
+				<posx>1045</posx>
+				<posy>682</posy>
+				<width>160</width>
+				<height>25</height>
+				<font>font14</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<label></label>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,45 @@
+<window>
+	<defaultcontrol>10</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<include>CommonStbBackground</include>
+		<control type="grouplist" id="1">
+			<posx>75</posx>
+			<posy>80</posy>
+			<height>515</height>
+			<width>800</width>
+			<align>left</align>
+			<aligny>center</aligny>
+			<itemgap>5</itemgap>
+			<orientation>vertical</orientation>
+		</control>
+		<control type="image">
+			<description>Section header image</description>
+			<posx>20</posx>
+			<posy>3</posy>
+			<width>35</width>
+			<height>35</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icon_system.png</texture>
+		</control>
+		<control type="grouplist">
+			<posx>65</posx>
+			<posy>5</posy>
+			<width>1000</width>
+			<height>30</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>5</itemgap>
+			<control type="label" id="2">
+				<include>WindowTitleCommons</include>
+				<label>_(Software update)</label>
+			</control>
+		</control>
+		<include>Clock</include>
+	</controls>
+</window>

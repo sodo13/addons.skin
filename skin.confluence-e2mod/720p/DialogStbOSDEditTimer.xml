@@ -1,0 +1,180 @@
+<window>
+	<defaultcontrol>10</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+	<animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+	<controls>
+		<control type="videowindow">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+		</control>
+		<control type="group">
+			<control type="image">
+				<posx>110</posx>
+				<posy>30</posy>
+				<width>1080</width>
+				<height>650</height>
+				<texture border="40">DialogBack2.png</texture>
+			</control>
+			<control type="image">
+				<posx>150</posx>
+				<posy>46</posy>
+				<width>1040</width>
+				<height>40</height>
+				<texture>dialogheader.png</texture>
+			</control>
+			<control type="label">
+				<posx>150</posx>
+				<posy>50</posy>
+				<width>1040</width>
+				<height>30</height>
+				<font>font13_title</font>
+				<label>_(Timer entry)</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>selected</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="grouplist" id="1">
+				<posx>150</posx>
+				<posy>90</posy>
+				<height>600</height>
+				<width>1020</width>
+				<align>left</align>
+				<aligny>center</aligny>
+				<itemgap>5</itemgap>
+				<orientation>vertical</orientation>
+				<ondown>100</ondown>
+				<onup>100</onup>
+				<control type="edit" id="10">
+					<height>30</height>
+					<width>1000</width>
+					<font>font132</font>
+					<textwidth>990</textwidth>
+					<label>_(Name)</label>
+				</control>
+				<control type="edit" id="11">
+					<height>30</height>
+					<width>1000</width>
+					<font>font132</font>
+					<textwidth>990</textwidth>
+					<label>_(Description)          </label>
+				</control>
+				<control type="spincontrolex" id="12">
+					<height>30</height>
+					<width>1000</width>
+					<texturefocus border="5">button-focus2.png</texturefocus>
+					<texturenofocus border="5">button-nofocus.png</texturenofocus>
+					<textcolor>white</textcolor>
+					<disabledcolor>grey3</disabledcolor>
+					<textoffsetx>12</textoffsetx>
+					<aligny>center</aligny>
+					<reverse>yes</reverse>
+					<font>font132</font>
+					<label>_(Date)</label>
+				</control>
+				<control type="edit" id="13">
+					<height>30</height>
+					<width>1000</width>
+					<font>font132</font>
+					<textwidth>990</textwidth>
+					<label>_(Start time)</label>
+				</control>
+				<control type="edit" id="14">
+					<height>30</height>
+					<width>1000</width>
+					<font>font132</font>
+					<textwidth>990</textwidth>
+					<label>_(End time)</label>
+				</control>
+				<control type="edit" id="15">
+					<height>30</height>
+					<width>1000</width>
+					<font>font132</font>
+					<textwidth>990</textwidth>
+					<label>_(Channel)</label>
+				</control>
+				<control type="radiobutton" id="16">
+					<height>30</height>
+					<width>1000</width>
+					<font>font132</font>
+					<label>_(Record)</label>
+					<textcolor>white</textcolor>
+					<texturefocus border="5">button-focus2.png</texturefocus>
+					<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				</control>
+				<control type="radiobutton" id="17">
+					<height>30</height>
+					<width>1000</width>
+					<font>font132</font>
+					<label>_(Zap)</label>
+					<textcolor>white</textcolor>
+					<texturefocus border="5">button-focus2.png</texturefocus>
+					<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				</control>
+				<control type="button" id="18">
+					<visible>!IsEmpty(Window.Property(have_remotes))</visible>
+					<height>30</height>
+					<width>1000</width>
+					<font>font132</font>
+					<textwidth>990</textwidth>
+					<label>_(Stb)</label>
+					<texturefocus border="5">button-focus2.png</texturefocus>
+					<texturenofocus border="5">button-nofocus.png</texturenofocus>
+					<dropdownicon>true</dropdownicon>
+					<dropwidth>33</dropwidth>
+					<dropheight>22</dropheight>
+					<dropxoffset>955</dropxoffset>
+					<dropyoffset>4</dropyoffset>
+					<texturedropdown>scroll-down-2.png</texturedropdown>
+				</control>
+			</control>
+			<control type="image">
+				<posx>440</posx>
+				<posy>610</posy>
+				<width>30</width>
+				<height>30</height>
+				<texture border="1">key_green.png</texture>
+			</control>
+			<control type="button" id="100">
+				<posx>435</posx>
+				<posy>610</posy>
+				<width>200</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>
+				<label>186</label>
+				<onright>101</onright>
+				<onup>10</onup>
+				<ondown>10</ondown>
+			</control>
+			<control type="image">
+				<posx>690</posx>
+				<posy>610</posy>
+				<width>30</width>
+				<height>30</height>
+				<texture border="1">key_red.png</texture>
+			</control>
+			<control type="button" id="101">
+				<posx>685</posx>
+				<posy>610</posy>
+				<width>200</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>
+				<label>222</label>
+				<onleft>100</onleft>
+				<onup>10</onup>
+				<ondown>10</ondown>
+			</control>
+		</control>
+	</controls>
+</window>

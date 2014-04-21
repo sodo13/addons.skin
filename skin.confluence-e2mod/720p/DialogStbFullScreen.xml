@@ -1,0 +1,90 @@
+<window>
+	<defaultcontrol>--</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="videowindow">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+		</control>
+		<control type="group">
+			<posx>100</posx>
+			<posy>100</posy>
+			<visible>!IsEmpty(Window(StbFullScreen).Property(timeshift_show))</visible>
+			<animation effect="fade" time="300">Visible</animation>
+			<animation effect="fade" time="400">Hidden</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>70</height>
+				<texture border="20">OverlayDialogBackground.png</texture>
+			</control>
+			<control type="image">
+				<posx>20</posx>
+				<posy>15</posy>
+				<width>40</width>
+				<height>40</height>
+				<texture>OSDPauseNF.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>!IsEmpty(Window(StbFullScreen).Property(timeshift_pause))</visible>
+			</control>
+			<control type="image">
+				<posx>20</posx>
+				<posy>15</posy>
+				<width>40</width>
+				<height>40</height>
+				<texture>OSDPlayNF.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>!IsEmpty(Window(StbFullScreen).Property(timeshift_play))</visible>
+			</control>
+			<control type="label">
+				<posx>80</posx>
+				<posy>20</posy>
+				<width>100</width>
+				<height>40</height>
+				<font>font14</font>
+				<label>$INFO[Stb.TimeShiftLength]</label>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="progress" id="1">
+				<posx>10</posx>
+				<posy>58</posy>
+				<width>180</width>
+				<height>4</height>
+				<info>Stb.TimeShiftProgress</info>
+				<midtexture border="6,0,6,0">OSDProgressMidLight.png</midtexture>
+			</control>
+			<control type="progress" id="1">
+				<posx>10</posx>
+				<posy>58</posy>
+				<width>180</width>
+				<height>4</height>
+				<info>Stb.TimeShiftProgress</info>
+			</control>
+		</control>
+		<control type="group">
+			<control type="label">
+				<posx>180</posx>
+				<posy>610</posy>
+				<width>900</width>
+				<height>120</height>
+				<font>font24_title</font>
+				<label>$INFO[Window(StbFullScreen).Property(ttxdata)]</label>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+		</control>
+	</controls>
+</window>

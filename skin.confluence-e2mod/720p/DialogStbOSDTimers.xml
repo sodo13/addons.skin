@@ -1,0 +1,250 @@
+<window>
+	<defaultcontrol>10</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+	<animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+	<controls>
+		<control type="videowindow">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+		</control>
+		<control type="group">
+			<control type="image">
+				<posx>110</posx>
+				<posy>30</posy>
+				<width>1080</width>
+				<height>650</height>
+				<texture border="40">DialogBack2.png</texture>
+			</control>
+			<control type="image">
+				<posx>150</posx>
+				<posy>46</posy>
+				<width>1040</width>
+				<height>40</height>
+				<texture>dialogheader.png</texture>
+			</control>
+			<control type="label">
+				<posx>150</posx>
+				<posy>50</posy>
+				<width>1040</width>
+				<height>30</height>
+				<font>font13_title</font>
+				<label>_(Timer overview)</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>selected</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="list" id="10">
+				<posx>130</posx>
+				<posy>105</posy>
+				<width>1040</width>
+				<height>500</height>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="50" width="1000">
+					<control type="image" id="1">
+						<posx>15</posx>
+						<posy>5</posy>
+						<width>20</width>
+						<height>20</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texture>timer_rec.png</texture>
+						<visible>ListItem.StbList_TimerActive</visible>
+					</control>
+					<control type="image" id="1">
+						<posx>15</posx>
+						<posy>5</posy>
+						<width>20</width>
+						<height>20</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texture>timer_done.png</texture>
+						<visible>ListItem.StbList_TimerDone</visible>
+					</control>
+					<control type="image" id="1">
+						<posx>15</posx>
+						<posy>5</posy>
+						<width>20</width>
+						<height>20</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texture>timer_wait.png</texture>
+						<visible>!ListItem.StbList_TimerDone + !ListItem.StbList_TimerActive</visible>
+					</control>
+					<control type="label">
+						<posx>50</posx>
+						<posy>0</posy>
+						<width>600</width>
+						<height>25</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>grey</selectedcolor>
+						<info>ListItem.StbList_TimerName</info>
+					</control>
+					<control type="label">
+						<posx>1020</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>25</height>
+						<font>font14</font>
+						<align>right</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>grey</selectedcolor>
+						<info>ListItem.StbList_TimerChannelName</info>
+					</control>
+					<control type="label">
+						<posx>1020</posx>
+						<posy>25</posy>
+						<width>400</width>
+						<height>25</height>
+						<font>font12</font>
+						<align>right</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>grey</selectedcolor>
+						<info>ListItem.StbList_TimerTimeInfo</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="50" width="1000">
+					<control type="image">
+						<posx>12</posx>
+						<posy>0</posy>
+						<width>1016</width>
+						<height>50</height>
+						<texture border="1">button-nofocus.png</texture>
+						<include>VisibleFadeEffect</include>
+					</control>
+					<control type="image">
+						<posx>12</posx>
+						<posy>0</posy>
+						<width>1016</width>
+						<height>50</height>
+						<texture border="1">button-focus2.png</texture>
+						<include>VisibleFadeEffect</include>
+					</control>
+					<control type="image" id="1">
+						<posx>15</posx>
+						<posy>5</posy>
+						<width>20</width>
+						<height>20</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texture>timer_rec.png</texture>
+						<visible>ListItem.StbList_TimerActive</visible>
+					</control>
+					<control type="image" id="1">
+						<posx>15</posx>
+						<posy>5</posy>
+						<width>20</width>
+						<height>20</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texture>timer_done.png</texture>
+						<visible>ListItem.StbList_TimerDone</visible>
+					</control>
+					<control type="image" id="1">
+						<posx>15</posx>
+						<posy>5</posy>
+						<width>20</width>
+						<height>20</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<texture>timer_wait.png</texture>
+						<visible>!ListItem.StbList_TimerDone + !ListItem.StbList_TimerActive</visible>
+					</control>
+					<control type="label">
+						<posx>50</posx>
+						<posy>0</posy>
+						<width>600</width>
+						<height>25</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>grey</selectedcolor>
+						<info>ListItem.StbList_TimerName</info>
+					</control>
+					<control type="label">
+						<posx>1020</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>25</height>
+						<font>font14</font>
+						<align>right</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>grey</selectedcolor>
+						<info>ListItem.StbList_TimerChannelName</info>
+					</control>
+					<control type="label">
+						<posx>1020</posx>
+						<posy>25</posy>
+						<width>400</width>
+						<height>25</height>
+						<font>font12</font>
+						<align>right</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>grey</selectedcolor>
+						<info>ListItem.StbList_TimerTimeInfo</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="group">
+				<control type="image">
+					<posx>285</posx>
+					<posy>630</posy>
+					<width>25</width>
+					<height>25</height>
+					<texture border="1">key_red.png</texture>
+				</control>
+				<control type="image">
+					<posx>475</posx>
+					<posy>630</posy>
+					<width>25</width>
+					<height>25</height>
+					<texture border="1">key_green.png</texture>
+				</control>
+				<control type="image">
+					<posx>665</posx>
+					<posy>630</posy>
+					<width>25</width>
+					<height>25</height>
+					<texture border="1">key_yellow.png</texture>
+				</control>
+				<control type="image">
+					<posx>855</posx>
+					<posy>630</posy>
+					<width>25</width>
+					<height>25</height>
+					<texture border="1">key_blue.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<control type="label">
+					<posx>315</posx>
+					<posy>628</posy>
+					<width>160</width>
+					<height>25</height>
+					<font>font14</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<label>_(Delete)</label>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

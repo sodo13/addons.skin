@@ -1,0 +1,99 @@
+<window type="dialog">
+	<defaultcontrol always="true">10</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="videowindow">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+		</control>
+		<control type="group">
+			<animation effect="slide" start="400,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="400,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<control type="image">
+				<posx>400r</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<height>720</height>
+				<texture border="15,0,0,0" flipx="true">HomeBladeSub.png</texture>
+			</control>
+			<control type="image">
+				<posx>390r</posx>
+				<posy>50</posy>
+				<width>220</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture>Confluence_Logo.png</texture>
+			</control>
+			<control type="button" id ="10">
+				<posx>380r</posx>
+				<posy>140</posy>
+				<width>370</width>
+				<height>30</height>
+				<font>font14</font>
+				<label>_(show transponder info)</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<onup>10</onup>
+				<ondown>11</ondown>
+			</control>
+			<control type="button" id ="11">
+				<posx>380r</posx>
+				<posy>170</posy>
+				<width>370</width>
+				<height>30</height>
+				<font>font14</font>
+				<label>_(Audio tracks)</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<onup>10</onup>
+				<ondown>12</ondown>
+			</control>
+			<control type="button" id ="12">
+				<posx>380r</posx>
+				<posy>200</posy>
+				<width>370</width>
+				<height>30</height>
+				<font>font14</font>
+				<label>_(Subtitle tracks)</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<onup>11</onup>
+				<ondown>13</ondown>
+			</control>
+			<control type="button" id ="13">
+				<posx>380r</posx>
+				<posy>230</posy>
+				<width>370</width>
+				<height>30</height>
+				<font>font14</font>
+				<label>_(Timers)</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<onup>12</onup>
+				<ondown>14</ondown>
+			</control>
+		</control>
+	</controls>
+</window>

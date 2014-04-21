@@ -1,0 +1,544 @@
+<window>
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<include>CommonStbBackground2</include>
+		<control type="group">
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+				<effect type="fade" start="0" end="100" time="300" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
+			<control type="list" id="9000">
+				<posx>75</posx>
+				<posy>80</posy>
+				<width>1105</width>
+				<height>560</height>
+				<aligny>center</aligny>
+				<itemgap>-1</itemgap>
+				<scrolltime>300</scrolltime>
+				<!-- <onleft>9020</onleft> -->
+				<onright>9020</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<description>Animation sets when you go to the next column the previous column on x precent fade zero is disappear</description>
+				<animation effect="fade" start="100" end="50" time="100" condition="!Control.HasFocus(9000)">Conditional</animation>
+				<itemlayout height="35" width="1180">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>30</height>
+						<width>360</width>
+						<texture border="5">button-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>350</width>
+						<height>25</height>
+						<font>font16_title</font>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="35" width="1180">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>360</width>
+						<height>30</height>
+						<texture border="5">button-focus2.png</texture>
+						<animation effect="fade" start="100" end="40" time="100" condition="!Control.HasFocus(9000)">Conditional</animation>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>350</width>
+						<height>25</height>
+						<font>font16_title</font>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>	
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>_(AV Setup)</label>
+						<label2>_(Configure video and audio settings.)</label2>
+						<onclick>SetFocus(9020)</onclick>
+					</item>
+					<item id="2">
+						<label>_(Tuner Setup)</label>
+						<label2>_(Configure DVB Tuner and scan for channels.)</label2>
+						<onclick>SetFocus(9020)</onclick>
+					</item>
+					<item id="3">
+						<label>_(Hardware Setup)</label>
+						<label2>_(Configure the hardware devices, like ethernet, remote and storage devices.)</label2>
+						<onclick>SetFocus(9020)</onclick>
+					</item>
+					<item id="4">
+						<label>_(Software Setup)</label>
+						<label2>_(Update, install, remove Stb plugins and go back to factory reset.)</label2>
+						<onclick>SetFocus(9020)</onclick>
+					</item>
+					<item id="5">
+						<label>_(Advanced Setup)</label>
+						<label2>_(Configure and setup the more advanced software/plugins.)</label2>
+						<onclick>SetFocus(9020)</onclick>
+					</item>
+				</content>
+			</control>
+		</control>
+		<control type="group">
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="0" />
+				<effect type="fade" start="0" end="100" time="0" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="0" />
+				<effect type="fade" start="100" end="100" time="0" />
+			</animation>
+			<control type="list" id="9020">
+				<visible>Container(9000).HasFocus(1)</visible>
+				<posx>475</posx>
+				<posy>80</posy>
+				<width>1105</width>
+				<height>560</height>
+				<aligny>center</aligny>
+				<itemgap>-1</itemgap>
+				<scrolltime>300</scrolltime>
+				<onleft>9000</onleft>
+				<onup>9020</onup>
+				<ondown>9020</ondown>
+				<animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(9020)">Conditional</animation>
+				<itemlayout height="35" width="1180">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>30</height>
+						<width>720</width>
+						<texture border="5">button-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>710</width>
+						<height>25</height>
+						<font>font16_title</font>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="35" width="1180">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>720</width>
+						<height>30</height>
+						<texture border="5">button-focus2.png</texture>
+						<animation effect="fade" start="100" end="40" time="0" condition="!Control.HasFocus(9020)">Conditional</animation>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>710</width>
+						<height>25</height>
+						<font>font16_title</font>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>	
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="101">
+						<label>_(Video output setup)</label>
+						<label2>_(Configure the video resolution.)</label2>
+						<onclick>ActivateWindowAndFocus(StbVideoSetup)</onclick>
+					</item>
+					<item id="102">
+						<label>_(CEC setup)</label>
+						<label2>_(Configure the HDMI CEC (Consumer Electronic Control) for the TV.)</label2>
+						<onclick>ActivateWindow(StbCecSetup)</onclick>
+					</item>
+					<item id="103">
+						<label>_(OSD setup)</label>
+						<label2>_(Configure the OSD options.)</label2>
+						<onclick>ActivateWindow(StbOsdSetup)</onclick>
+					</item>
+				</content>
+			</control>
+			<control type="list" id="9020">
+				<visible>Container(9000).HasFocus(2)</visible>
+				<posx>475</posx>
+				<posy>80</posy>
+				<width>1105</width>
+				<height>560</height>
+				<aligny>center</aligny>
+				<itemgap>-1</itemgap>
+				<scrolltime>300</scrolltime>
+				<onleft>9000</onleft>
+				<onright>9010</onright>
+				<onup>9020</onup>
+				<ondown>9020</ondown>
+				<animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(9020)">Conditional</animation>
+				<itemlayout height="35" width="1180">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>30</height>
+						<width>720</width>
+						<texture border="5">button-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>710</width>
+						<height>25</height>
+						<font>font16_title</font>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="35" width="1180">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>720</width>
+						<height>30</height>
+						<texture border="5">button-focus2.png</texture>
+						<animation effect="fade" start="100" end="40" time="0" condition="!Control.HasFocus(9020)">Conditional</animation>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>710</width>
+						<height>25</height>
+						<font>font16_title</font>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>	
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="201">
+						<label>_(Tuner setup)</label>
+						<label2>_(Configure the DVB tuner.)</label2>
+						<onclick>ActivateWindow(StbTunerChoise)</onclick>
+					</item>
+					<item id="202">
+						<label>_(Scan)</label>
+						<label2>_(Scan the transponder or satellite for new channels.)</label2>
+						<onclick>ActivateWindow(StbSatScanSetup)</onclick>
+					</item>
+					<item id="203">
+						<label>_(Fast scan)</label>
+						<label2>_(Install a pre-configurate channellist which is provide by the TV provider.)</label2>
+						<onclick>ActivateWindow(StbSatFastScanSetup)</onclick>
+					</item>
+				</content>
+			</control>
+			<control type="list" id="9020">
+				<visible>Container(9000).HasFocus(3)</visible>
+				<posx>475</posx>
+				<posy>80</posy>
+				<width>1105</width>
+				<height>560</height>
+				<aligny>center</aligny>
+				<itemgap>-1</itemgap>
+				<scrolltime>300</scrolltime>
+				<onleft>9000</onleft>
+				<onright>9010</onright>
+				<onup>9020</onup>
+				<ondown>9020</ondown>
+				<animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(9020)">Conditional</animation>
+				<itemlayout height="35" width="1180">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>30</height>
+						<width>720</width>
+						<texture border="5">button-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>710</width>
+						<height>25</height>
+						<font>font16_title</font>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="35" width="1180">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>720</width>
+						<height>30</height>
+						<texture border="5">button-focus2.png</texture>
+						<animation effect="fade" start="100" end="40" time="0" condition="!Control.HasFocus(9020)">Conditional</animation>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>710</width>
+						<height>25</height>
+						<font>font16_title</font>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>	
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="301">
+						<label>_(Network Setup)</label>
+						<label2>_(Configure your network settings.)</label2>
+						<onclick>ActivateWindow(StbNetwork)</onclick>
+					</item>
+					<item id="302">
+						<label>_(Harddisk Setup)</label>
+						<label2>_(Configure the recording storage path and settings.)</label2>
+						<onclick>ActivateWindow(StbRecordingSetup)</onclick>
+					</item>
+					<item id="303">
+						<label>_(Remote Control Setup)</label>
+						<label2>_(Configure the remote controller settings.)</label2>
+						<onclick>ActivateWindow(StbRcSetup)</onclick>
+					</item>
+				</content>
+			</control>
+			<control type="list" id="9020">
+				<visible>Container(9000).HasFocus(4)</visible>
+				<posx>475</posx>
+				<posy>80</posy>
+				<width>1105</width>
+				<height>560</height>
+				<aligny>center</aligny>
+				<itemgap>-1</itemgap>
+				<scrolltime>300</scrolltime>
+				<onleft>9000</onleft>
+				<onright>9010</onright>
+				<onup>9020</onup>
+				<ondown>9020</ondown>
+				<animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(9020)">Conditional</animation>
+				<itemlayout height="35" width="1180">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>30</height>
+						<width>720</width>
+						<texture border="5">button-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>710</width>
+						<height>25</height>
+						<font>font16_title</font>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="35" width="1180">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>720</width>
+						<height>30</height>
+						<texture border="5">button-focus2.png</texture>
+						<animation effect="fade" start="100" end="40" time="0" condition="!Control.HasFocus(9020)">Conditional</animation>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>710</width>
+						<height>25</height>
+						<font>font16_title</font>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>	
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="401">
+						<label>_(Install/remove stb plugins)</label>
+						<label2>_(Install the online plugins or remove the STB plugins.)</label2>
+						<onclick>ActivateWindow(StbPackages)</onclick>
+					</item>
+					<item id="402">
+						<label>_(Install ipk)</label>
+						<label2>_(install from a storage device the IPK plugin manually.)</label2>
+						<onclick>ActivateWindow(StbInstallIpk)</onclick>
+					</item>
+					<item id="403">
+						<label>_(Update software)</label>
+						<label2>_(Update the STB box to the lastest available software/firmware version. Which is provide online.)</label2>
+						<onclick>ActivateWindow(StbUpdate)</onclick>
+					</item>
+					<item id="404">
+						<label>_(Softcam setup)</label>
+						<label2>_(Configure the softcam and start/restart)</label2>
+						<onclick>ActivateWindow(StbSoftcam)</onclick>
+					</item>
+					<item id="405">
+						<label>_(Stb info)</label>
+						<label2>_(Show the STB hardware and software information of the STB box.)</label2>
+						<onclick>ActivateWindow(StbAbout)</onclick>
+					</item>
+					<item id="406">
+						<label>_(Factory reset)</label>
+						<label2>_(Carefull: This will set the standard settings back and it will remove all installed xbmc plugins.)</label2>
+						<onclick>ActivateWindow(StbFactoryReset)</onclick>
+					</item>
+				</content>
+			</control>
+			<control type="list" id="9020">
+				<visible>Container(9000).HasFocus(5)</visible>
+				<posx>475</posx>
+				<posy>80</posy>
+				<width>1105</width>
+				<height>560</height>
+				<aligny>center</aligny>
+				<itemgap>-1</itemgap>
+				<scrolltime>300</scrolltime>
+				<onleft>9000</onleft>
+				<onright>9010</onright>
+				<onup>9020</onup>
+				<ondown>9020</ondown>
+				<animation effect="fade" start="100" end="50" time="0" condition="!Control.HasFocus(9020)">Conditional</animation>
+				<itemlayout height="35" width="1180">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>30</height>
+						<width>720</width>
+						<texture border="5">button-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>710</width>
+						<height>25</height>
+						<font>font16_title</font>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="35" width="1180">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>720</width>
+						<height>30</height>
+						<texture border="5">button-focus2.png</texture>
+						<animation effect="fade" start="100" end="40" time="0" condition="!Control.HasFocus(9020)">Conditional</animation>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>710</width>
+						<height>25</height>
+						<font>font16_title</font>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>	
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="501">
+						<label>_(Remote Stb Setup)</label>
+						<label2>_(Configure the remote STB which can been used to send data like EPG, timers and realtime streams.)</label2>
+						<onclick>ActivateWindow(StbRemoteSetup)</onclick>
+					</item>
+				</content>
+			</control>
+		</control>
+		<control type="grouplist" id="1">
+			<posx>470</posx>
+			<posy>600</posy>
+			<width>760</width>
+			<height>50</height>
+			<align>left</align>
+			<itemgap>5</itemgap>
+			<orientation>Horizontal</orientation>
+			<control type="image">
+				<width>35</width>
+				<height>35</height>
+				<texture>DefaultIconInfo.png</texture> 
+			</control>
+			<control type="textbox">
+				<visible>Control.HasFocus(9000)</visible>
+				<description>Help information</description>
+				<width>700</width>
+				<height>50</height>
+				<font>font12</font>
+				<label>$INFO[Container(9000).ListItem.Label2]</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<visible>Control.HasFocus(9020)</visible>
+				<description>Help information</description>
+				<width>700</width>
+				<height>50</height>
+				<font>font12</font>
+				<label>$INFO[Container(9020).ListItem.Label2]</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+		</control>
+		<control type="image">
+			<description>Section header image</description>
+			<posx>20</posx>
+			<posy>3</posy>
+			<width>35</width>
+			<height>35</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icon_system.png</texture>
+		</control>
+		<control type="grouplist">
+			<posx>65</posx>
+			<posy>5</posy>
+			<width>1000</width>
+			<height>30</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>5</itemgap>
+			
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<label>_(Setup) - $INFO[Container(9000).ListItem.Label]</label>
+			</control>
+		</control>
+		<include>Clock</include>
+	</controls>
+</window>

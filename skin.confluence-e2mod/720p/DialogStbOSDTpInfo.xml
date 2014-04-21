@@ -1,0 +1,364 @@
+<window>
+	<defaultcontrol>-</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+	<animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+	<controls>
+		<control type="videowindow">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+		</control>
+		<control type="group">
+			<control type="image">
+				<posx>240</posx>
+				<posy>140</posy>
+				<width>800</width>
+				<height>500</height>
+				<texture border="40">DialogBack2.png</texture>
+			</control>
+			<control type="image">
+				<posx>280</posx>
+				<posy>156</posy>
+				<width>720</width>
+				<height>40</height>
+				<texture>dialogheader.png</texture>
+			</control>
+			<control type="label">
+				<posx>280</posx>
+				<posy>160</posy>
+				<width>720</width>
+				<height>30</height>
+				<font>font13_title</font>
+				<label>_(Transponder info)</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>selected</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="grouplist" id="1">
+				<posx>340</posx>
+				<posy>200</posy>
+				<height>400</height>
+				<width>500</width>
+				<align>left</align>
+				<aligny>center</aligny>
+				<itemgap>5</itemgap>
+				<orientation>vertical</orientation>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>200</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>_(System)</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>200</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>_(Type)</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>200</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>_(Modulation)</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>200</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>_(Orbital position)</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>200</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>_(Frequency)</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>200</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>_(Symbolrate)</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>200</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>_(Polarisation)</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>200</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>_(Inversion)</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>200</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>_(FEC)</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>200</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>_(Pilot)</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!IsEmpty(Window.Property(tuner_dvbs2))</visible>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>200</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>_(Roll-off)</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!IsEmpty(Window.Property(tuner_dvbs2))</visible>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>200</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>_(Service name)</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>200</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>_(Provider name)</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>120</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>_(SNR)    $INFO[Stb.snr]%</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<posx>20</posx>
+					<posy>300</posy>
+					<height>20</height>
+					<width>120</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>_(BER)    $INFO[Stb.ber]</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="grouplist" id="1">
+				<posx>550</posx>
+				<posy>200</posy>
+				<height>400</height>
+				<width>480</width>
+				<align>left</align>
+				<aligny>center</aligny>
+				<itemgap>5</itemgap>
+				<orientation>vertical</orientation>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>380</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>$INFO[Stb.TunerType]</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>380</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>$INFO[Stb.TunerSystem]</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>380</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>$INFO[Stb.Modulation]</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>380</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>$INFO[Stb.OrbitalPositionLong]</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>380</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>$INFO[Stb.Frequency]</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>380</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>$INFO[Stb.Symbolrate]</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>380</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>$INFO[Stb.Polarisation]</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>380</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>$INFO[Stb.Inversion]</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>380</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>$INFO[Stb.Fec]</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>380</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>$INFO[Stb.Pilot]</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!IsEmpty(Window.Property(tuner_dvbs2))</visible>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>380</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>$INFO[Stb.Roloff]</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>!IsEmpty(Window.Property(tuner_dvbs2))</visible>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>380</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>$INFO[Stb.ChannelName]</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<height>20</height>
+					<width>380</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<label>$INFO[Stb.ServiceProvider]</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="progress" id="1">
+					<width>380</width>
+					<height>20</height>
+					<info>Stb.SnrInt</info>
+					<midtexture border="6,0,6,0">OSDProgressMidLight.png</midtexture>
+				</control>
+				<control type="progress" id="1">
+					<width>380</width>
+					<height>20</height>
+					<info>Stb.BerInt</info>
+					<midtexture border="6,0,6,0">OSDProgressMidLight.png</midtexture>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

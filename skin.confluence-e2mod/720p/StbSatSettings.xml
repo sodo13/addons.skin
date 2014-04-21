@@ -1,0 +1,1053 @@
+<window>
+	<defaultcontrol>10</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<include>CommonStbBackground</include>
+		<control type="grouplist" id="1">
+			<posx>75</posx>
+			<posy>80</posy>
+			<height>515</height>
+			<width>775</width>
+			<align>left</align>
+			<aligny>center</aligny>
+			<itemgap>5</itemgap>
+			<orientation>vertical</orientation>
+			<ondown>1000</ondown>
+			<onup>1000</onup>
+			<control type="button" id="10">
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<disabledcolor>grey3</disabledcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<font>font132</font>
+				<label>_(Configuration mode)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="11">
+				<visible>!IsEmpty(Window.Property(configmode_simple))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<disabledcolor>grey3</disabledcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<font>font132</font>
+				<label>_(DiSEqC mode)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="20">
+				<visible>!IsEmpty(Window.Property(configmode_simple)) + [!IsEmpty(Window.Property(diseqcmode_ab)) | !IsEmpty(Window.Property(diseqcmode_abcd)) | !IsEmpty(Window.Property(diseqcmode_toneburst)) | !IsEmpty(Window.Property(diseqcmode_single))]</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Port A)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="21">
+				<visible>!IsEmpty(Window.Property(configmode_simple)) + [!IsEmpty(Window.Property(diseqcmode_toneburst)) | !IsEmpty(Window.Property(diseqcmode_abcd)) | !IsEmpty(Window.Property(diseqcmode_ab))]</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Port B)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="22">
+				<visible>!IsEmpty(Window.Property(configmode_simple)) + [!IsEmpty(Window.Property(diseqcmode_abcd))]</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Port C)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="23">
+				<visible>!IsEmpty(Window.Property(configmode_simple)) + [!IsEmpty(Window.Property(diseqcmode_abcd))]</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Port D)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="radiobutton" id="30">
+				<visible>!IsEmpty(Window.Property(configmode_simple)) + [!IsEmpty(Window.Property(diseqcmode_abcd)) | !IsEmpty(Window.Property(diseqcmode_ab))]</visible>
+				<height>30</height>
+				<width>735</width>
+				<font>font132</font>
+				<label>_(Set voltage and 22KHz)</label>
+				<textcolor>white</textcolor>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+			</control>
+			<control type="radiobutton" id="31">
+				<visible>!IsEmpty(Window.Property(configmode_simple)) + [!IsEmpty(Window.Property(diseqcmode_abcd)) | !IsEmpty(Window.Property(diseqcmode_ab))]</visible>
+				<height>30</height>
+				<width>735</width>
+				<font>font132</font>
+				<label>_(Send DiSEqC only on satellite change)</label>
+				<textcolor>white</textcolor>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+			</control>
+			<control type="radiobutton" id="40">
+				<visible>!IsEmpty(Window.Property(configmode_simple)) + [!IsEmpty(Window.Property(diseqcmode_single))]</visible>
+				<height>30</height>
+				<width>735</width>
+				<font>font132</font>
+				<label>_(Send diseqc)</label>
+				<textcolor>white</textcolor>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+			</control>
+			<control type="button" id="100">
+				<visible>!IsEmpty(Window.Property(configmode_advanced))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Satellite)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="101">
+				<visible>!IsEmpty(Window.Property(configmode_advanced))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(LNB)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="102">
+				<visible>!IsEmpty(Window.Property(configmode_advanced))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Priority)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="200">
+				<visible>!IsEmpty(Window.Property(configmode_advanced))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(LOF)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="201">
+				<visible>!IsEmpty(Window.Property(configmode_advanced)) + !IsEmpty(Window.Property(lof_mode_user))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(LOF/L)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="202">
+				<visible>!IsEmpty(Window.Property(configmode_advanced)) + !IsEmpty(Window.Property(lof_mode_user))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(LOF/H)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="203">
+				<visible>!IsEmpty(Window.Property(configmode_advanced)) + !IsEmpty(Window.Property(lof_mode_user))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Threshold)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="400">
+				<visible>!IsEmpty(Window.Property(configmode_advanced))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Voltage mode)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="radiobutton" id="401">
+				<visible>!IsEmpty(Window.Property(configmode_advanced))</visible>
+				<height>30</height>
+				<width>735</width>
+				<font>font132</font>
+				<label>_(Increased voltage)</label>
+				<textcolor>white</textcolor>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+			</control>
+			<control type="button" id="402">
+				<visible>!IsEmpty(Window.Property(configmode_advanced))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Tone mode)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="500">
+				<visible>!IsEmpty(Window.Property(configmode_advanced))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(DiSEqC mode)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="600">
+				<visible>!IsEmpty(Window.Property(configmode_advanced)) + !IsEmpty(Window.Property(diseqc_mode_advanced))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Toneburst)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="601">
+				<visible>!IsEmpty(Window.Property(configmode_advanced)) + !IsEmpty(Window.Property(diseqc_mode_advanced))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Committed DiSEqC command)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="radiobutton" id="602">
+				<visible>!IsEmpty(Window.Property(configmode_advanced)) + !IsEmpty(Window.Property(diseqc_mode_advanced))</visible>
+				<height>30</height>
+				<width>735</width>
+				<font>font132</font>
+				<label>_(Fast DiSEqC)</label>
+				<textcolor>white</textcolor>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+			</control>
+			<control type="radiobutton" id="603">
+				<visible>!IsEmpty(Window.Property(configmode_advanced)) + !IsEmpty(Window.Property(diseqc_mode_advanced))</visible>
+				<height>30</height>
+				<width>735</width>
+				<font>font132</font>
+				<label>_(Sequence repeat)</label>
+				<textcolor>white</textcolor>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+			</control>
+			<control type="button" id="604">
+				<visible>!IsEmpty(Window.Property(configmode_advanced)) + !IsEmpty(Window.Property(diseqc_mode_advanced))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Command order)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="610">
+				<visible>!IsEmpty(Window.Property(configmode_advanced)) + !IsEmpty(Window.Property(diseqc_mode_advanced)) + !IsEmpty(Window.Property(diseqc_mode_advanced_11))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Uncommitted DiSEqC command)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="611">
+				<visible>!IsEmpty(Window.Property(configmode_advanced)) + !IsEmpty(Window.Property(diseqc_mode_advanced)) + !IsEmpty(Window.Property(diseqc_mode_advanced_11))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(DiSEqC repeats)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="700">
+				<visible>!IsEmpty(Window.Property(diseqc_mode_advanced_12)) | !IsEmpty(Window.Property(diseqcmode_positioner))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Longitude)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="701">
+				<visible>!IsEmpty(Window.Property(diseqc_mode_advanced_12)) | !IsEmpty(Window.Property(diseqcmode_positioner))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label></label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="702">
+				<visible>!IsEmpty(Window.Property(diseqc_mode_advanced_12)) | !IsEmpty(Window.Property(diseqcmode_positioner))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Latitude)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="703">
+				<visible>!IsEmpty(Window.Property(diseqc_mode_advanced_12)) | !IsEmpty(Window.Property(diseqcmode_positioner))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label></label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="704">
+				<visible>!IsEmpty(Window.Property(diseqc_mode_advanced_12)) | !IsEmpty(Window.Property(diseqcmode_positioner))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Tuning step size)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="705">
+				<visible>!IsEmpty(Window.Property(diseqc_mode_advanced_12)) | !IsEmpty(Window.Property(diseqcmode_positioner))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Horizontal turning speed)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="button" id="706">
+				<visible>!IsEmpty(Window.Property(diseqc_mode_advanced_12)) | !IsEmpty(Window.Property(diseqcmode_positioner))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Vertical turning speed)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+		</control>
+		<control type="grouplist" id="1">
+			<posx>840</posx>
+			<posy>570</posy>
+			<height>85</height>
+			<width>370</width>
+			<align>left</align>
+			<aligny>center</aligny>
+			<itemgap>5</itemgap>
+			<orientation>Horizontal</orientation>
+			<control type="image">
+				<width>35</width>
+				<height>35</height>
+				<texture>DefaultIconInfo.png</texture> 
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(10)</visible>
+				<label>_(Select configuration mode simple or advanced. Simple configuration mode is for universal LNB's and in combination with a DiSEqC motor or switch.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(11)</visible>
+				<label>_(Select the LNB setup, single LNB or a combination of a DiSEqC Switch or Motor.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(20)</visible>
+				<label>_(Set the desired satellite for DiSEqC Switch A or input 1)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(21)</visible>
+				<label>_(Set the desired satellite for DiSEqC Switch B or input 2)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(22)</visible>
+				<label>_(Set the desired satellite for DiSEqC Switch C or input 3)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(23)</visible>
+				<label>_(Set the desired satellite for DiSEqC Switch D or input 4)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(30)</visible>
+				<label>_(Set the voltage and 22Khz, it should allways been activated unless you use a multiswitch which powers the LNB.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(31)</visible>
+				<label>_(Send DiSEqC only when satellite change. It's standard disabled, unless there are switching problems with the diSEqC switch.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(40)</visible>
+				<label>_()</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(100)</visible>
+				<label>_(Select a satellite and assign it to a LNB number.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(101)</visible>
+				<label>_(Select a number which you want to assign to the satellite.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(102)</visible>
+				<label>_(Priority)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(200)</visible>
+				<label>_(Setup LOF LNB)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(201)</visible>
+				<label>_(Voltage)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(202)</visible>
+				<label>_(Incread Voltage)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(203)</visible>
+				<label>_(Tone Mode)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(400)</visible>
+				<label>_(Voltage)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(401)</visible>
+				<label>_(Increase voltage)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(402)</visible>
+				<label>_(Tone mode)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(500)</visible>
+				<label>_(Select the DiSEQC mode when the LNB is connect to a DiSEqC switch or motor.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(600)</visible>
+				<label>_(Toneburst)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(601)</visible>
+				<label>_(Commited DiSEqC command)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(602)</visible>
+				<label>_(Fast DiSEqC)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(603)</visible>
+				<label>_(Sequence repeat)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(604)</visible>
+				<label>_(Command order)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(610)</visible>
+				<label>_(Uncomitted DiSEqC command)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(611)</visible>
+				<label>_(DiSEqC repeats)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(700)</visible>
+				<label>_(Longitude)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(701)</visible>
+				<label>_(Orbit east west value)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(702)</visible>
+				<label>_(Latitude)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(703)</visible>
+				<label>_(orbit north south value)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(704)</visible>
+				<label>_(Tuning step size)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(705)</visible>
+				<label>_(Horizontal turning speed)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(706)</visible>
+				<label>_(Vertical turning speed)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>100</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(1000)</visible>
+				<label>_(Quit and save the settings.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>100</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(1001)</visible>
+				<label>_(Quit without saving the settings.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+		</control>
+		<control type="image">
+			<posx>215</posx>
+			<posy>610</posy>
+			<width>30</width>
+			<height>30</height>
+			<texture border="1">key_green.png</texture>
+		</control>
+		<control type="button" id="1000">
+			<posx>210</posx>
+			<posy>610</posy>
+			<width>200</width>
+			<height>30</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font12_title</font>
+			<label>_(Save)</label>
+			<onright>1001</onright>
+			<onup>1</onup>
+			<ondown>10</ondown>
+		</control>
+		<control type="image">
+			<posx>465</posx>
+			<posy>610</posy>
+			<width>30</width>
+			<height>30</height>
+			<texture border="1">key_red.png</texture>
+		</control>
+		<control type="button" id="1001">
+			<posx>460</posx>
+			<posy>610</posy>
+			<width>200</width>
+			<height>30</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font12_title</font>
+			<label>_(Cancel)</label>
+			<onleft>1000</onleft>
+			<onup>1</onup>
+			<ondown>10</ondown>
+		</control>
+		<control type="image">
+			<description>Section header image</description>
+			<posx>20</posx>
+			<posy>3</posy>
+			<width>35</width>
+			<height>35</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icon_system.png</texture>
+		</control>
+		<control type="grouplist">
+			<posx>65</posx>
+			<posy>5</posy>
+			<width>1000</width>
+			<height>30</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>5</itemgap>
+			<control type="label" id="2">
+				<include>WindowTitleCommons</include>
+				<label>_(Tuner) $INFO[Window.Property(tuner_nr)] _(setup)</label>
+			</control>
+		</control>
+		<include>Clock</include>
+	</controls>
+</window>

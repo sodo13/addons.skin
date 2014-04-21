@@ -1,0 +1,106 @@
+<window>
+	<defaultcontrol>10</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<include>CommonStbBackground</include>
+		<control type="grouplist" id="1">
+			<posx>75</posx>
+			<posy>80</posy>
+			<height>515</height>
+			<width>775</width>
+			<align>left</align>
+			<aligny>center</aligny>
+			<itemgap>5</itemgap>
+			<orientation>vertical</orientation>
+			<ondown>100</ondown>
+			<onup>100</onup>
+			<control type="sliderex" id="10">
+				<height>30</height>
+				<width>735</width>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<font>font13</font>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<label>_(OSD timeout)</label>
+			</control>
+			<control type="radiobutton" id="11">
+				<height>30</height>
+				<width>735</width>
+				<font>font132</font>
+				<label>_(Show weather forcast in OSD)</label>
+				<textcolor>white</textcolor>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+			</control>
+		</control>
+		<control type="image">
+			<posx>215</posx>
+			<posy>610</posy>
+			<width>30</width>
+			<height>30</height>
+			<texture border="1">key_green.png</texture>
+		</control>
+		<control type="button" id="100">
+			<posx>210</posx>
+			<posy>610</posy>
+			<width>200</width>
+			<height>30</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font12_title</font>
+			<label>_(Save)</label>
+			<onright>101</onright>
+			<onup>1</onup>
+			<ondown>10</ondown>
+		</control>
+		<control type="image">
+			<posx>465</posx>
+			<posy>610</posy>
+			<width>30</width>
+			<height>30</height>
+			<texture border="1">key_red.png</texture>
+		</control>
+		<control type="button" id="101">
+			<posx>460</posx>
+			<posy>610</posy>
+			<width>200</width>
+			<height>30</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font12_title</font>
+			<label>_(Cancel)</label>
+			<onleft>100</onleft>
+			<onup>1</onup>
+			<ondown>10</ondown>
+		</control>
+		<control type="image">
+			<description>Section header image</description>
+			<posx>20</posx>
+			<posy>3</posy>
+			<width>35</width>
+			<height>35</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icon_system.png</texture>
+		</control>
+		<control type="grouplist">
+			<posx>65</posx>
+			<posy>5</posy>
+			<width>1000</width>
+			<height>30</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>5</itemgap>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<label>_(OSD Setup)</label>
+			</control>
+		</control>
+		<include>Clock</include>
+	</controls>
+</window>

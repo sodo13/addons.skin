@@ -1,0 +1,128 @@
+<window>
+	<defaultcontrol>9000</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<include>CommonStbBackground</include>
+		<control type="group">
+			<control type="list" id="9000">
+				<posx>75</posx>
+				<posy>80</posy>
+				<width>1105</width>
+				<height>640</height>
+				<aligny>center</aligny>
+				<itemgap>5</itemgap>
+				<scrolltime>300</scrolltime>
+				<itemlayout height="35" width="1180">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<height>30</height>
+						<width>735</width>
+						<texture border="5">button-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>715</width>
+						<height>25</height>
+						<font>font16_title</font>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="35" width="1180">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>735</width>
+						<height>30</height>
+						<texture border="5">button-focus2.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>715</width>
+						<height>25</height>
+						<font>font16_title</font>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>	
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>_(Tuner setup)</label>
+						<label2>_(Setup the DVB tuners)</label2>
+						<onclick>ActivateWindow(StbTunerChoise)</onclick>
+					</item>
+					<item id="2">
+						<label>_(Scan)</label>
+						<label2>_(Scan for channels.)</label2>
+						<onclick>ActivateWindow(StbSatScanSetup)</onclick>
+					</item>
+					<item id="3">
+						<label>_(Fast scan)</label>
+						<label2>_(Fastscan are preselected satellite lists which are supplied by satellite providers)</label2>
+						<onclick>ActivateWindow(StbSatFastScanSetup)</onclick>
+					</item>
+				</content>
+			</control>
+		</control>
+		<control type="grouplist" id="1">
+			<posx>840</posx>
+			<posy>570</posy>
+			<height>85</height>
+			<width>370</width>
+			<align>left</align>
+			<aligny>center</aligny>
+			<itemgap>5</itemgap>
+			<orientation>Horizontal</orientation>
+			<control type="image">
+				<width>35</width>
+				<height>35</height>
+				<texture>DefaultIconInfo.png</texture> 
+			</control>
+			<control type="textbox">
+				<description>Help information</description>
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<label>$INFO[Container(9000).ListItem.Label2]</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+		</control>
+		<control type="image">
+			<description>Section header image</description>
+			<posx>20</posx>
+			<posy>3</posy>
+			<width>35</width>
+			<height>35</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icon_system.png</texture>
+		</control>
+		<control type="grouplist">
+			<posx>65</posx>
+			<posy>5</posy>
+			<width>1000</width>
+			<height>30</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>5</itemgap>
+			<control type="label" id="2">
+				<include>WindowTitleCommons</include>
+				<label>_(Tuner settings) - $INFO[Container(9000).ListItem.Label]</label>
+			</control>
+		</control>
+		<include>Clock</include>
+	</controls>
+</window>

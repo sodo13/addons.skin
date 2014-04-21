@@ -229,6 +229,126 @@
 				</control>
 			</control>
 		</control>
+		<!-- Stb Channel info -->
+		<control type="group">
+			<posx>0</posx>
+			<posy>50</posy>
+			<visible>Player.HasVideo + !Skin.HasSetting(homepageVideoinfo) + !Player.HasMedia</visible>
+			<include>VisibleFadeEffect</include>
+			<include>Window_OpenClose_Animation</include>
+			<control type="group">
+				<control type="image">
+					<description>Cover image</description>
+					<posx>20</posx>
+					<posy>45</posy>
+					<width>120</width>
+					<height>300</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture>$INFO[Stb.ChannelPicon,/picon/,.png]</texture>
+					<bordertexture border="8">ThumbBorder.png</bordertexture>
+					<bordersize>5</bordersize>
+				</control>
+				<control type="label">
+					<description>Channel label</description>
+					<posx>160</posx>
+					<posy>265</posy>
+					<height>25</height>
+					<width>660</width>
+					<label>$INFO[Stb.ChannelName]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>160</posx>
+					<posy>285</posy>
+					<height>30</height>
+					<width>1000</width>
+					<label>$INFO[Stb.nowepgdata]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Time Label</description>
+					<posx>160</posx>
+					<posy>310</posy>
+					<height>30</height>
+					<width>300</width>
+					<label>$INFO[Stb.nowstarttime] - $INFO[Stb.nextstarttime]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+		</control>
+		<!-- Stb Channel info -->
+		<control type="group">
+			<posx>0</posx>
+			<posy>50</posy>
+			<visible>Player.HasVideo + !Skin.HasSetting(homepageVideoinfo) + !Player.HasMedia</visible>
+			<include>VisibleFadeEffect</include>
+			<include>Window_OpenClose_Animation</include>
+			<control type="group">
+				<control type="image">
+					<description>Cover image</description>
+					<posx>20</posx>
+					<posy>45</posy>
+					<width>120</width>
+					<height>300</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture>$INFO[Stb.ChannelPicon,/picon/,.png]</texture>
+					<bordertexture border="8">ThumbBorder.png</bordertexture>
+					<bordersize>5</bordersize>
+				</control>
+				<control type="label">
+					<description>Channel label</description>
+					<posx>160</posx>
+					<posy>265</posy>
+					<height>25</height>
+					<width>660</width>
+					<label>$INFO[Stb.ChannelName]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>160</posx>
+					<posy>285</posy>
+					<height>30</height>
+					<width>1000</width>
+					<label>$INFO[Stb.nowepgdata]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Time Label</description>
+					<posx>160</posx>
+					<posy>310</posy>
+					<height>30</height>
+					<width>300</width>
+					<label>$INFO[Stb.nowstarttime] - $INFO[Stb.nextstarttime]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+		</control>
 		<!-- Video Info -->
 		<control type="group">
 			<left>0</left>
@@ -736,6 +856,13 @@
 				<top>70</top>
 				<onup>9000</onup>
 				<ondown>9002</ondown>
+				<control type="grouplist" id="9019">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9010</onleft>
+					<onright>9010</onright>
+					<visible>Container(9000).HasFocus(13)</visible>
+					<include>HomeSubMenuStb</include> <!-- Buttons for the grouplist -->
+				</control>
 				<control type="grouplist" id="9010">
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9010</onleft>
@@ -896,6 +1023,12 @@
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + !IsEmpty(Weather.Plugin)</visible>
+					</item>
+					<item id="13">
+						<label>_(STB MENU)</label>
+						<onclick>ActivateWindow(StbSetup)</onclick>
+						<icon>-</icon>
+						<thumb>-</thumb>
 					</item>
 					<item id="4">
 						<label>31951</label>

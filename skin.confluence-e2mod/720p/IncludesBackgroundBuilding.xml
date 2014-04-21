@@ -394,5 +394,97 @@
 			</control>
 		</control>
 	</include>
-
+	<include name="CommonStbBackground">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>special://skin/backgrounds/SKINDEFAULT.jpg</texture>
+		</control>
+		<control type="image">
+			<posx>50</posx>
+			<posy>50</posy>
+			<width>1180</width>
+			<height>620</height>
+			<texture border="15">ContentPanel.png</texture>
+		</control>
+		<control type="image">
+			<posx>65</posx>
+			<posy>65</posy>
+			<width>1150</width>
+			<height>590</height>
+			<texture border="40">black-back2.png</texture>
+		</control>
+		<control type="image">
+			<posx>75</posx>
+			<posy>61</posy>
+			<width>1000</width>
+			<height>30</height>
+			<texture>GlassTitleBar.png</texture>
+		</control>
+		<control type="image">
+			<posx>843</posx>
+			<posy>80</posy>
+			<width>350</width>
+			<height>200</height>
+			<texture border="1">button-nofocus.png</texture>
+		</control>
+		<control type="videowindow">
+			<posx>845</posx>
+			<posy>80</posy>
+			<width>345</width>
+			<height>200</height>
+		</control>
+	</include>
+	<include name="CommonStbBackground2">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>special://skin/backgrounds/SKINDEFAULT.jpg</texture>
+		</control>
+		<control type="image">
+			<posx>50</posx>
+			<posy>50</posy>
+			<width>1180</width>
+			<height>620</height>
+			<texture border="15">ContentPanel.png</texture>
+		</control>
+		<control type="image">
+			<posx>455</posx>
+			<posy>65</posy>
+			<width>755</width>
+			<height>590</height>
+			<texture border="40">black-back2.png</texture>
+		</control>
+		<control type="image">
+			<posx>455</posx>
+			<posy>85</posy>
+			<width>5</width>
+			<height>590</height>
+			<texture border="5">separator_vertical.png</texture>
+		</control>
+		<control type="image">
+			<posx>75</posx>
+			<posy>61</posy>
+			<width>1000</width>
+			<height>30</height>
+			<texture>GlassTitleBar.png</texture>
+		</control>
+		<control type="image">
+			<posx>78</posx>
+			<posy>445</posy>
+			<width>350</width>
+			<height>205</height>
+			<texture border="1">button-nofocus.png</texture>
+		</control>
+		<control type="videowindow">
+			<posx>80</posx>
+			<posy>447</posy>
+			<width>345</width>
+			<height>200</height>
+		</control>
+	</include>
 </includes>

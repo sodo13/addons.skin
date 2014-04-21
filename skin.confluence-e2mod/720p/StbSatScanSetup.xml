@@ -1,0 +1,431 @@
+<window>
+	<defaultcontrol>10</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<include>CommonStbBackground</include>
+		<control type="grouplist" id="1">
+			<posx>75</posx>
+			<posy>80</posy>
+			<height>515</height>
+			<width>775</width>
+			<align>left</align>
+			<aligny>center</aligny>
+			<itemgap>5</itemgap>
+			<orientation>vertical</orientation>
+			<ondown>100</ondown>
+			<onup>100</onup>
+			<control type="spincontrolex" id="10">
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<disabledcolor>grey3</disabledcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Tuner)</label>
+			</control>
+			<control type="spincontrolex" id="11">
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<disabledcolor>grey3</disabledcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Type of scan)</label>
+			</control>
+			<control type="button" id="12">
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<disabledcolor>grey3</disabledcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<font>font132</font>
+				<label>_(Satellite)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="spincontrolex" id="20">
+				<visible>!IsEmpty(Window.Property(configmode_tp))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(System)</label>
+			</control>
+			<control type="button" id="21">
+				<visible>!IsEmpty(Window.Property(configmode_tp))</visible>
+				<height>30</height>
+				<width>735</width>
+				<font>font132</font>
+				<textwidth>1180</textwidth>
+				<label> _(Frequency)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="spincontrolex" id="22">
+				<visible>!IsEmpty(Window.Property(configmode_tp))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Inversion)</label>
+			</control>
+			<control type="button" id="23">
+				<visible>!IsEmpty(Window.Property(configmode_tp))</visible>
+				<height>30</height>
+				<width>735</width>
+				<font>font132</font>
+				<textwidth>1180</textwidth>
+				<label> _(Symbol rate)</label>
+				<dropdownicon>true</dropdownicon>
+				<dropwidth>33</dropwidth>
+				<dropheight>22</dropheight>
+				<dropxoffset>695</dropxoffset>
+				<dropyoffset>4</dropyoffset>
+				<texturedropdown>scroll-down-2.png</texturedropdown>
+			</control>
+			<control type="spincontrolex" id="24">
+				<visible>!IsEmpty(Window.Property(configmode_tp))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Polarisation)</label>
+			</control>
+			<control type="spincontrolex" id="25">
+				<visible>!IsEmpty(Window.Property(configmode_tp))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(FEC)</label>
+			</control>
+			<control type="spincontrolex" id="26">
+				<visible>!IsEmpty(Window.Property(configmode_dvbs2))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Modulation)</label>
+			</control>
+			<control type="spincontrolex" id="27">
+				<visible>!IsEmpty(Window.Property(configmode_dvbs2))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Roll-off)</label>
+			</control>
+			<control type="spincontrolex" id="28">
+				<visible>!IsEmpty(Window.Property(configmode_dvbs2))</visible>
+				<height>30</height>
+				<width>735</width>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<textcolor>white</textcolor>
+				<textoffsetx>12</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<font>font132</font>
+				<label>_(Pilot)</label>
+			</control>
+			<control type="radiobutton" id="50">
+				<height>30</height>
+				<width>735</width>
+				<font>font132</font>
+				<label> _(Network scan)</label>
+				<textcolor>white</textcolor>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+			</control>
+			<control type="radiobutton" id="51">
+				<height>30</height>
+				<width>735</width>
+				<font>font132</font>
+				<label> _(Clear before scan)</label>
+				<textcolor>white</textcolor>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+			</control>
+			<control type="radiobutton" id="52">
+				<height>30</height>
+				<width>735</width>
+				<font>font132</font>
+				<label> _(Only free scan)</label>
+				<textcolor>white</textcolor>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+			</control>
+		</control>
+		<control type="grouplist" id="1">
+			<posx>840</posx>
+			<posy>570</posy>
+			<height>85</height>
+			<width>370</width>
+			<align>left</align>
+			<aligny>center</aligny>
+			<itemgap>5</itemgap>
+			<orientation>Horizontal</orientation>
+			<control type="image">
+				<width>35</width>
+				<height>35</height>
+				<texture>DefaultIconInfo.png</texture> 
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(10)</visible>
+				<label>_(Select the DVB tuner, which will preform the scan.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(11)</visible>
+				<label>_(Scan the complete satellite or only a transponder from the satellite.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(12)</visible>
+				<label>_(Select the satellite which you want to scan.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(20)</visible>
+				<label>_(Select the desired DVB system.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(21)</visible>
+				<label>_(Adjust frequency.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(22)</visible>
+				<label>_(Adjust spectral inversation.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(23)</visible>
+				<label>_(Adjust the symbol rate.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(24)</visible>
+				<label>_(Adjust the polarisation vertical 13V or horizontal 18V)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(25)</visible>
+				<label>_(Adjust the FEC (forward error correction).)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(26)</visible>
+				<label>_(Adjust modulation.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(27)</visible>
+				<label>_(Adjust Roll-off.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(28)</visible>
+				<label>_(Adjust pilot.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(50)</visible>
+				<label>_(Network scan captures the NIT table. It provides information of the transponder owner. The transponder(s) will been scanned as well.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(51)</visible>
+				<label>_(CAREFULL: Removes the channellist, before the scan start.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>85</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(52)</visible>
+				<label>_(Scan only the free to air channels. Scrambled channels will not appear in the channellist.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="textbox">
+				<width>330</width>
+				<height>100</height>
+				<font>font12</font>
+				<visible>Control.HasFocus(100)</visible>
+				<label>_(Start scan, this may take a while.)</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+		</control>	
+		<control type="image">
+			<posx>300</posx>
+			<posy>610</posy>
+			<width>30</width>
+			<height>30</height>
+			<texture border="1">key_green.png</texture>
+		</control>
+		<control type="button" id="100">
+			<posx>295</posx>
+			<posy>610</posy>
+			<width>280</width>
+			<height>30</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font12_title</font>
+			<label>_(Start scan)</label>
+			<onup>1</onup>
+			<ondown>10</ondown>
+		</control>
+		<control type="image">
+			<description>Section header image</description>
+			<posx>20</posx>
+			<posy>3</posy>
+			<width>35</width>
+			<height>35</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icon_system.png</texture>
+		</control>
+		<control type="grouplist">
+			<posx>65</posx>
+			<posy>5</posy>
+			<width>1000</width>
+			<height>30</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>5</itemgap>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<label>_(Scan setup)</label>
+			</control>
+		</control>
+		<include>Clock</include>
+	</controls>
+</window>

@@ -1,0 +1,104 @@
+<window>
+	<defaultcontrol>-</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="videowindow">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+		</control>
+		<control type="group">
+			<control type="image" id="1">
+				<posx>0</posx>
+				<posy>230r</posy>
+				<width>1280</width>
+				<height>230</height>
+				<texture>HomeNowPlayingBack.png</texture>
+				<visible>!IsEmpty(Window.Property(show_osd))</visible>
+			</control>
+			<control type="image" id="1">
+				<description>cover image</description>
+				<posx>20</posx>
+				<posy>260r</posy>
+				<width>300</width>
+				<height>230</height>
+				<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<bordertexture border="8">ThumbShadow.png</bordertexture>
+				<bordersize>8</bordersize>
+				<visible>!IsEmpty(Window.Property(show_osd))</visible>
+			</control>
+			<control type="label" id="1">
+				<posx>430</posx>
+				<posy>145r</posy>
+				<width>910</width>
+				<height>30</height>
+				<font>font30</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[VideoPlayer.Title]</label>
+				<textcolor>orange</textcolor>
+				<scroll>true</scroll>
+				<visible>!IsEmpty(Window.Property(show_osd))</visible>
+			</control>
+			<control type="group" id="1">
+				<posx>330</posx>
+				<posy>95r</posy>
+				<visible>!IsEmpty(Window.Property(show_osd))</visible>
+				<control type="label" id="1">
+					<posx>100</posx>
+					<width min="10" max="710">auto</width>
+					<height>25</height>
+					<font>font25</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[VideoPlayer.ChannelName]</label>
+					<textcolor>white</textcolor>
+					<scroll>true</scroll>
+				</control>
+				<control type="label" id="1">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>40</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Stb.StbPlaybackPosition]</label>
+				</control>
+				<control type="progress" id="1">
+					<description>ProgressbarCache</description>
+					<posx>100</posx>
+					<posy>15</posy>
+					<width>720</width>
+					<height>16</height>
+					<info>Player.ProgressCache</info>
+					<midtexture border="6,0,6,0">OSDProgressMidLight.png</midtexture>
+				</control>
+				<control type="progress" id="1">
+					<description>Progressbar</description>
+					<posx>100</posx>
+					<posy>15</posy>
+					<width>720</width>
+					<height>16</height>
+					<info>Stb.StbPlayBackProgress</info>
+				</control>
+				<control type="label" id="1">
+					<posx>920</posx>
+					<posy>0</posy>
+					<width>100</width>
+					<height>40</height>
+					<font>font13</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[Stb.StbPlaybackEndtime]</label>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

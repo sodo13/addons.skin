@@ -1,0 +1,455 @@
+<window>
+	<defaultcontrol always="true">100</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="videowindow">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+		</control>
+		<control type="group">
+			<posx>100</posx>
+			<posy>100</posy>
+			<visible>!IsEmpty(Window(StbFullScreen).Property(timeshift_show))</visible>
+			<animation effect="fade" time="300">Visible</animation>
+			<animation effect="fade" time="400">Hidden</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<height>70</height>
+				<texture border="20">OverlayDialogBackground.png</texture>
+			</control>
+			<control type="image">
+				<posx>20</posx>
+				<posy>15</posy>
+				<width>40</width>
+				<height>40</height>
+				<texture>OSDPauseNF.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>!IsEmpty(Window(StbFullScreen).Property(timeshift_pause))</visible>
+			</control>
+			<control type="image">
+				<posx>20</posx>
+				<posy>15</posy>
+				<width>40</width>
+				<height>40</height>
+				<texture>OSDPlayNF.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>!IsEmpty(Window(StbFullScreen).Property(timeshift_play))</visible>
+			</control>
+			<control type="label">
+				<posx>80</posx>
+				<posy>20</posy>
+				<width>100</width>
+				<height>40</height>
+				<font>font14</font>
+				<label>$INFO[Stb.TimeShiftLength]</label>
+				<align>center</align>
+				<aligny>top</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="progress" id="1">
+				<posx>10</posx>
+				<posy>58</posy>
+				<width>180</width>
+				<height>4</height>
+				<info>Stb.TimeShiftProgress</info>
+				<midtexture border="6,0,6,0">OSDProgressMidLight.png</midtexture>
+			</control>
+			<control type="progress" id="1">
+				<posx>10</posx>
+				<posy>58</posy>
+				<width>180</width>
+				<height>4</height>
+				<info>Stb.TimeShiftProgress</info>
+			</control>
+		</control>
+		<control type="group" id="1">
+			<control type="image" id="1">
+				<posx>0</posx>
+				<posy>135r</posy>
+				<width>1280</width>
+				<height>145</height>
+				<texture>black-back.png</texture>
+			</control>
+			<control type="image" id="1">
+				<posx>20</posx>
+				<posy>138r</posy>
+				<width>1240</width>
+				<height>6</height>
+				<texture>separator2.png</texture>
+			</control>
+			<control type="image" id="1">
+				<posx>20</posx>
+				<posy>10r</posy>
+				<width>1240</width>
+				<height>5</height>
+				<texture>separator.png</texture>
+			</control>
+			<control type="group" id="1">
+				<posx>20</posx>
+				<posy>150r</posy>
+
+				<!-- left infobar block -->
+				<control type="label" id="1">
+					<posx>0</posx>
+					<posy>25</posy>
+					<width>200</width>
+					<height>25</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font10</font>
+					<textcolor>yellow</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>$INFO[System.Date]</label>
+				</control>
+				<control type="image" id="1">
+					<posx>90</posx>
+					<posy>30</posy>
+					<width>25</width>
+					<height>25</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<texture>record.png</texture>
+					<visible>Stb.Recording</visible>
+					<aspectratio align="center">keep</aspectratio>
+					<animation effect="fade" start="100,100" end="10,10" time="1000" pulse="true" condition="true">Conditional</animation>
+					<animation effect="zoom" start="100,100" end="25,25" center="auto" time="1000" pulse="true" condition="true">Conditional</animation>
+				</control>
+				<control type="image" id="1">
+					<posx>0</posx>
+					<posy>40</posy>
+					<width>120</width>
+					<height>120</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<texture>$INFO[Stb.ChannelPicon,/picon/,.png]</texture>
+					<aspectratio align="center">keep</aspectratio>
+				</control>
+
+				<!-- center infobar block -->
+				<control type="label" id="1">
+					<posx>130</posx>
+					<posy>30</posy>
+					<height>30</height>
+					<width>80</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font30_title</font>
+					<label>$INFO[Stb.ChannelNr,[COLOR=white],[/COLOR]]</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label" id="1">
+					<posx>210</posx>
+					<posy>30</posy>
+					<height>30</height>
+					<width>600</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font30_title</font>
+					<label>$INFO[Stb.ChannelName]</label>
+					<textcolor>blue</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+
+				<control type="grouplist" id="1">
+					<posx>800</posx>
+					<posy>30</posy>
+					<height>30</height>
+					<width>310</width>
+					<align>right</align>
+					<aligny>center</aligny>
+					<itemgap>5</itemgap>
+					<orientation>horizontal</orientation>
+
+					<control type="image" id="1">
+						<height>30</height>
+						<width>36</width>
+						<aspectratio align="left">keep</aspectratio>
+						<texture>crypted.png</texture>
+						<visible>Stb.encrypted</visible>
+					</control>
+					<control type="image" id="1">
+						<height>30</height>
+						<width>36</width>
+						<aspectratio align="left">keep</aspectratio>
+						<texture>ttx.png</texture>
+						<visible>!IsEmpty(Stb.TtxPid)</visible>
+					</control>
+					<control type="image" id="1">
+						<height>30</height>
+						<width>36</width>
+						<aspectratio align="left">keep</aspectratio>
+						<texture>$INFO[Stb.AspectRatio,flagging/aspectratio/,.png]</texture>
+						<visible>!IsEmpty(Window(StbFullScreen).Property(is_sd_channel))</visible>
+					</control>
+					<control type="image" id="1">
+						<height>30</height>
+						<width>36</width>
+						<aspectratio align="left">keep</aspectratio>
+						<texture>$INFO[Stb.VideoResolution,flagging/video/,.png]</texture>
+						<visible>!IsEmpty(Window(StbFullScreen).Property(is_hd_channel))</visible>
+					</control>
+					<control type="image" id="1">
+						<height>30</height>
+						<width>36</width>
+						<aspectratio align="left">keep</aspectratio>
+						<texture>$INFO[Stb.VideoResolutionHdSd,flagging/video/,.png]</texture>
+					</control>
+					<control type="image" id="1">
+						<height>30</height>
+						<width>60</width>
+						<aspectratio align="left">keep</aspectratio>
+						<texture>$INFO[Stb.AudioType,flagging/audio/,.png]</texture>
+					</control>
+					<control type="image" id="1">
+						<height>30</height>
+						<width>48</width>
+						<aspectratio align="left">keep</aspectratio>
+						<texture>$INFO[Stb.AudioTypeChannels,flagging/audio/,.png]</texture>
+					</control>
+				</control>
+				<control type="progress" id="1">
+					<posx>130</posx>
+					<posy>70</posy>
+					<width>980</width>
+					<height>8</height>
+					<info>Stb.Progress</info>
+					<midtexture border="6,0,6,0">OSDProgressMid.png</midtexture>
+				</control>
+				<control type="progress" id="1">
+					<posx>130</posx>
+					<posy>70</posy>
+					<width>980</width>
+					<height>9</height>
+					<info>Stb.Progress</info>
+				</control>
+				<control type="group" id="1">
+					<control type="label" id="1">
+						<posx>130</posx>
+						<posy>80</posy>
+						<height>30</height>
+						<width>100</width>
+						<font>font14</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[Stb.NowStartTime]</label>
+					</control>
+					<control type="label" id="1">
+						<posx>210</posx>
+						<posy>80</posy>
+						<height>30</height>
+						<width>830</width>
+						<font>font14</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[Stb.NowEpgData]</label>
+						<textcolor>white</textcolor>
+						<scroll>false</scroll>
+					</control>
+					<control type="label" id="1">
+						<posx>1100</posx>
+						<posy>80</posy>
+						<height>30</height>
+						<width>100</width>
+						<font>font14</font>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[Stb.NowDuration]</label>
+					</control>
+					<control type="label" id="1">
+						<posx>130</posx>
+						<posy>110</posy>
+						<height>30</height>
+						<width>100</width>
+						<font>font14</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[Stb.NextStartTime]</label>
+					</control>
+					<control type="label" id="1">
+						<posx>210</posx>
+						<posy>110</posy>
+						<height>30</height>
+						<width>830</width>
+						<font>font14</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[Stb.NextEpgData]</label>
+						<textcolor>white</textcolor>
+						<scroll>false</scroll>
+					</control>
+					<control type="label" id="1">
+						<posx>1100</posx>
+						<posy>110</posy>
+						<height>30</height>
+						<width>100</width>
+						<font>font14</font>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[Stb.NextDuration]</label>
+					</control>
+				</control>
+
+				<!-- right infobar block -->
+				<control type="label" id="1">
+					<visible>Stb.TunerAUsed</visible>
+					<posx>1140</posx>
+					<posy>30</posy>
+					<width>20</width>
+					<height>30</height>
+					<label>A</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font14</font>
+					<textcolor>yellow</textcolor>
+				</control>
+				<control type="label" id="1">
+					<visible>Stb.TunerAUsed + Stb.TunerAState</visible>
+					<posx>1140</posx>
+					<posy>30</posy>
+					<width>20</width>
+					<height>30</height>
+					<label>A</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font14</font>
+					<textcolor>green</textcolor>
+				</control>
+				<control type="label" id="1">
+					<visible>Stb.TunerBUsed</visible>
+					<posx>1160</posx>
+					<posy>30</posy>
+					<width>20</width>
+					<height>30</height>
+					<label>B</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font14</font>
+					<textcolor>yellow</textcolor>
+				</control>
+				<control type="label" id="1">
+					<visible>Stb.TunerBUsed + Stb.TunerBState</visible>
+					<posx>1160</posx>
+					<posy>30</posy>
+					<width>20</width>
+					<height>30</height>
+					<label>B</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font14</font>
+					<textcolor>green</textcolor>
+				</control>
+				<control type="label" id="1">
+					<posx>1140</posx>
+					<posy>60</posy>
+					<width>130</width>
+					<height>30</height>
+					<label>$INFO[Stb.VideoResolutionString]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+				</control>
+				<control type="label" id="1">
+					<posx>1140</posx>
+					<posy>85</posy>
+					<width>130</width>
+					<height>30</height>
+					<label>SNR $INFO[Stb.snr]%</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+				</control>
+				<control type="label" id="1">
+					<posx>1140</posx>
+					<posy>110</posy>
+					<width>130</width>
+					<height>30</height>
+					<label>$INFO[Stb.orbitalposition]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<textcolor>white</textcolor>
+				</control>
+			</control>
+
+			<!-- Weather forecast -->
+			<control type="label">
+				<description>Temp label</description>
+				<posx>30</posx>
+				<posy>5</posy>
+				<width min="0" max="300">auto</width>
+				<height>30</height>
+				<align>left</align>
+				<font>font28_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>[B]$INFO[Window(Weather).Property(Current.Temperature)][/B]</label>
+				<visible>!IsEmpty(Window(StbFullScreen).Property(show_osd_weather))</visible>
+			</control>
+			<control type="label">
+				<description>Temp Units</description>
+				<posx>65</posx>
+				<posy>5</posy>
+				<width>40</width>
+				<height>22</height>
+				<font>font10</font>
+				<label>$INFO[System.TemperatureUnits]</label>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>!IsEmpty(Window(Weather).Property(Current.Temperature)) + !IsEmpty(Window(StbFullScreen).Property(show_osd_weather))</visible>
+			</control>
+			<control type="image">
+				<description>Weather image</description>
+				<posx>85</posx>
+				<posy>0</posy>
+				<width>60</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[Weather.Conditions]</texture>
+				<visible>!IsEmpty(Window(Weather).Property(Current.Temperature)) + !IsEmpty(Window(StbFullScreen).Property(show_osd_weather))</visible>
+			</control>
+			<control type="label">
+				<description>Location label</description>
+				<posx>150</posx>
+				<posy>5</posy>
+				<width>500</width>
+				<height>15</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$INFO[Window(Weather).Property(Location)]</label>
+				<visible>!IsEmpty(Window(StbFullScreen).Property(show_osd_weather))</visible>
+			</control>
+		</control>
+
+		<include>Clock</include>
+		<control type="label">
+			<description>Date label</description>
+			<posx>20r</posx>
+			<posy>35</posy>
+			<width>200</width>
+			<height>15</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>font10</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>$INFO[System.Date]</label>
+			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" start="0,0" end="-40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,177 @@
+<window>
+	<defaultcontrol>10</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<include>CommonStbBackground</include>
+		<control type="list" id="10">
+			<posx>75</posx>
+			<posy>80</posy>
+			<height>515</height>
+			<width>775</width>
+			<viewtype label="535">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="26" width="440">
+				<control type="label">
+					<posx>15</posx>
+					<posy>0</posy>
+					<width>745</width>
+					<height>25</height>
+					<font>font12</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<selectedcolor>grey</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="26" width="460">
+				<control type="image">
+					<posx>11</posx>
+					<posy>0</posy>
+					<width>720</width>
+					<height>26</height>
+					<texture border="1">button-nofocus.png</texture>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="image">
+					<posx>11</posx>
+					<posy>0</posy>
+					<width>720</width>
+					<height>26</height>
+					<texture border="1">button-focus2.png</texture>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="label">
+					<posx>15</posx>
+					<posy>0</posy>
+					<width>695</width>
+					<height>25</height>
+					<font>font12</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<selectedcolor>grey</selectedcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="scrollbar" id="60">
+			<posx>830</posx>
+			<posy>290</posy>
+			<width>20</width>
+			<height>310</height>
+			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+			<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+			<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+			<textureslidernib>ScrollBarNib.png</textureslidernib>
+			<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+		</control>
+		<control type="image">
+			<posx>75</posx>
+			<posy>610</posy>
+			<width>25</width>
+			<height>25</height>
+			<texture border="1">key_red.png</texture>
+		</control>
+		<control type="image">
+			<posx>365</posx>
+			<posy>610</posy>
+			<width>25</width>
+			<height>25</height>
+			<texture border="1">key_green.png</texture>
+		</control>
+		<control type="image">
+			<posx>665</posx>
+			<posy>610</posy>
+			<width>25</width>
+			<height>25</height>
+			<texture border="1">key_yellow.png</texture>
+		</control>
+		<control type="image">
+			<posx>955</posx>
+			<posy>610</posy>
+			<width>25</width>
+			<height>25</height>
+			<texture border="1">key_blue.png</texture>
+		</control>
+		<control type="label">
+			<posx>105</posx>
+			<posy>608</posy>
+			<width>160</width>
+			<height>25</height>
+			<font>font14</font>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textcolor>white</textcolor>
+			<label>_(Show installed)</label>
+			<visible>!IsEmpty(Window.Property(type_install))</visible>
+		</control>
+		<control type="label">
+			<posx>395</posx>
+			<posy>608</posy>
+			<width>160</width>
+			<height>25</height>
+			<font>font14</font>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textcolor>white</textcolor>
+			<label>_(Show available)</label>
+			<visible>IsEmpty(Window.Property(type_install))</visible>
+		</control>
+		<control type="label">
+			<posx>985</posx>
+			<posy>608</posy>
+			<width>160</width>
+			<height>25</height>
+			<font>font14</font>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textcolor>white</textcolor>
+			<label>_(Normal mode)</label>
+			<visible>!IsEmpty(Window.Property(mode_expert))</visible>
+		</control>
+		<control type="label">
+			<posx>985</posx>
+			<posy>608</posy>
+			<width>160</width>
+			<height>25</height>
+			<font>font14</font>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textcolor>white</textcolor>
+			<label>_(Expert mode)</label>
+			<visible>IsEmpty(Window.Property(mode_expert))</visible>
+		</control>
+		<control type="image">
+			<description>Section header image</description>
+			<posx>20</posx>
+			<posy>3</posy>
+			<width>35</width>
+			<height>35</height>
+			<aspectratio>keep</aspectratio>
+			<texture>icon_system.png</texture>
+		</control>
+		<control type="grouplist">
+			<posx>65</posx>
+			<posy>5</posy>
+			<width>1000</width>
+			<height>30</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>5</itemgap>
+			<control type="label" id="2">
+				<include>WindowTitleCommons</include>
+				<label>_(Software)</label>
+			</control>
+		</control>
+		<include>Clock</include>
+	</controls>
+</window>
